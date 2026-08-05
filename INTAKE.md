@@ -68,11 +68,23 @@ the *facts* change: a new bottle, a corrected window, a bottle opened.
    cd ~/Projects/wine-cellar && python3 build.py
    ```
 
-   Then republish to the **same** artifact URL — pass it as `url` to the Artifact tool
-   with `dist/artifact.html`. The URL is recorded in `ARCHITECTURE.md`. A new URL means
-   the owner's bookmark breaks, so never let one get minted by accident.
+   The build writes three copies: `docs/index.html` (GitHub Pages — **the owner's
+   bookmark**), `dist/index.html` (local preview), `dist/artifact.html` (claude.ai
+   mirror).
 
-6. **Commit.** `git add -A && git commit`.
+   Publishing is the **git push** (step 6) — GitHub Pages redeploys
+   `https://jjoson-ai.github.io/wine-cellar/` automatically within a minute.
+   After pushing, also republish `dist/artifact.html` to the same claude.ai artifact
+   URL (pass it as `url` to the Artifact tool) so the mirror stays in sync. Both URLs
+   are recorded in `ARCHITECTURE.md`. Never mint a new URL of either kind — bookmarks
+   break.
+
+6. **Commit and push.** `git add -A && git commit && git push`. The repo is **public**
+   (github.com/jjoson-ai/wine-cellar): keep personal details out of commit messages and
+   entries, and author commits as `jjoson-ai <jjoson-ai@users.noreply.github.com>`
+   (already the repo-local git config — do not override it with `-c user.email=...`).
+   The local-only branch `pre-github-history` holds the pre-publication history and
+   must never be pushed.
 
 ## Other things the owner says
 

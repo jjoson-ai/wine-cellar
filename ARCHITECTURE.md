@@ -4,7 +4,13 @@ A private mini-site for one person's wine collection. Its single job: answer
 *"what should I open tonight?"* at a glance, and give something worth saying when the
 bottle is poured.
 
-Live page (private): <https://claude.ai/code/artifact/0f3ff4ad-fc0b-4240-b8eb-df329ed66f28>
+Live page (**primary bookmark**, public): <https://jjoson-ai.github.io/wine-cellar/>
+Mirror (claude.ai, private to owner): <https://claude.ai/code/artifact/0f3ff4ad-fc0b-4240-b8eb-df329ed66f28>
+
+The repo is public (<https://github.com/jjoson-ai/wine-cellar>) and GitHub Pages serves
+`docs/` from `main` — so `git push` *is* the deploy. The claude.ai artifact had
+device-cache staleness issues as a bookmark; GitHub Pages replaced it as primary on
+2026-08-06.
 
 ## Shape
 
@@ -12,7 +18,7 @@ No framework, no build tooling, no dependencies. Three source files produce one
 self-contained page.
 
 ```
-wines.json  ──┐
+wines.json  ──┐              docs/index.html      (GitHub Pages — the deploy artifact)
 photos/*.jpg ─┼─→ build.py ─→ dist/index.html     (standalone document, open locally)
 template.html ┘              dist/artifact.html   (body only; the Artifact tool supplies
                                                    doctype/head/body)
