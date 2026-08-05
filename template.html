@@ -1,0 +1,985 @@
+<title>The Cellar</title>
+<style>
+  :root {
+    color-scheme: dark;
+
+    --ink:        #100C0C;
+    --ink-2:      #171211;
+    --panel:      #1C1615;
+    --panel-2:    #241C1A;
+    --line:       #2E2422;
+    --line-soft:  #241D1B;
+
+    --cream:      #F1E8D9;
+    --cream-dim:  #BCAC9A;
+    --muted:      #8B7C6E;
+
+    --wine:       #8E2338;
+    --wine-lift:  #C24A62;
+
+    --gold:       #DCA646;
+    --rust:       #C4573A;
+    --sage:       #94A97C;
+    --slate:      #6E819A;
+
+    --display: Didot, "Bodoni 72", "Hoefler Text", "Times New Roman", serif;
+    --body: "Iowan Old Style", "Palatino Linotype", Palatino, Charter, Georgia, serif;
+    --ui: ui-sans-serif, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    --data: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+
+    --tl-w: 320px;
+    --wrap: 1060px;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background:
+      radial-gradient(120% 80% at 50% -10%, #241A18 0%, rgba(36,26,24,0) 60%),
+      var(--ink);
+    color: var(--cream);
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 28px; }
+
+  /* ---------- masthead ---------- */
+
+  .mast { padding: 72px 0 40px; }
+  .mast__mark {
+    font-family: var(--ui);
+    font-size: 11px;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+    color: var(--wine-lift);
+    margin: 0 0 22px;
+  }
+  .mast__thesis {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(30px, 5.4vw, 52px);
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+    margin: 0 0 20px;
+    max-width: 16ch;
+  }
+  .mast__thesis em { font-style: italic; color: var(--gold); }
+  .mast__meta {
+    font-family: var(--ui);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    margin: 0;
+  }
+  .mast__meta b { color: var(--cream-dim); font-weight: 600; }
+
+  /* ---------- controls ---------- */
+
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: center;
+    padding: 22px 0 30px;
+    border-top: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line-soft);
+    margin-bottom: 44px;
+  }
+  .search {
+    flex: 1 1 240px;
+    min-width: 0;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    color: var(--cream);
+    font-family: var(--body);
+    font-size: 15px;
+    padding: 10px 13px;
+  }
+  .search::placeholder { color: var(--muted); }
+  .search:focus-visible { outline: 2px solid var(--gold); outline-offset: 1px; }
+
+  .filters { display: flex; flex-wrap: wrap; gap: 7px; }
+  .chip {
+    font-family: var(--ui);
+    font-size: 11px;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--cream-dim);
+    background: transparent;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 7px 14px;
+    cursor: pointer;
+    transition: border-color .18s, color .18s, background .18s;
+  }
+  .chip:hover { border-color: var(--muted); color: var(--cream); }
+  .chip[aria-pressed="true"] {
+    color: var(--ink);
+    background: var(--cream-dim);
+    border-color: var(--cream-dim);
+  }
+  .chip:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+  /* ---------- rack (a group of bottles) ---------- */
+
+  .rack { margin-bottom: 56px; }
+  .rack__head {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 6px;
+  }
+  .rack__title {
+    font-family: var(--ui);
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 600;
+  }
+  .rack--now   .rack__title { color: var(--gold); }
+  .rack--well  .rack__title { color: var(--sage); }
+  .rack--hold  .rack__title { color: var(--slate); }
+  .rack__count { font-family: var(--data); font-size: 12px; color: var(--muted); }
+  .rack__say {
+    font-size: 15px;
+    color: var(--cream-dim);
+    margin: 0 0 18px;
+    max-width: 58ch;
+  }
+
+  .ruler {
+    width: var(--tl-w);
+    margin-left: auto;
+    position: relative;
+    height: 15px;
+    margin-bottom: 4px;
+  }
+  .ruler span {
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    font-family: var(--data);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+
+  .rack__body { position: relative; border-top: 1px solid var(--line-soft); }
+  .rack__lines {
+    position: absolute;
+    top: 0; bottom: 0; right: 0;
+    width: var(--tl-w);
+    pointer-events: none;
+  }
+  .rack__lines i {
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 1px;
+    background: var(--line-soft);
+  }
+  .rack__lines i.today {
+    background: linear-gradient(to bottom, rgba(220,166,70,.45), rgba(220,166,70,.12));
+    width: 1px;
+  }
+
+  /* ---------- row ---------- */
+
+  .row {
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr) var(--tl-w);
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--line-soft);
+    color: inherit;
+    font: inherit;
+    padding: 16px 0;
+    cursor: pointer;
+    position: relative;
+    transition: background .18s;
+  }
+  .row::before {
+    content: "";
+    position: absolute;
+    left: -14px; right: -14px; top: 0; bottom: 0;
+    background: transparent;
+    transition: background .18s;
+    pointer-events: none;
+  }
+  .row:hover::before { background: rgba(241,232,217,.035); }
+  .row:focus-visible { outline: 0; }
+  .row:focus-visible::before { background: rgba(241,232,217,.05); box-shadow: inset 0 0 0 1px var(--gold); }
+
+  .row__photo {
+    width: 48px;
+    height: 70px;
+    border-radius: 2px;
+    overflow: hidden;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    display: grid;
+    place-items: center;
+  }
+  .row__photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .row__photo svg { width: 22px; height: 52px; }
+
+  .row__info { min-width: 0; }
+  .row__producer {
+    font-family: var(--ui);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 3px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    flex-wrap: wrap;
+  }
+  .row__name {
+    font-family: var(--display);
+    font-size: 22px;
+    line-height: 1.2;
+    margin: 0 0 5px;
+    color: var(--cream);
+  }
+  .row__name .vint { font-family: var(--data); font-size: 15px; color: var(--cream-dim); margin-left: 8px; letter-spacing: .02em; }
+  .row__sub {
+    font-family: var(--ui);
+    font-size: 12px;
+    color: var(--muted);
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 12px;
+  }
+  .row__sub .span { font-family: var(--data); }
+
+  .dot { width: 6px; height: 6px; border-radius: 50%; flex: none; }
+  .dot--red { background: #7B1E32; }
+  .dot--white { background: #D8C98A; }
+  .dot--rose { background: #E0A0A6; }
+  .dot--sparkling { background: #E8D9A0; }
+  .dot--dessert { background: #C99B4A; }
+  .dot--fortified { background: #6E2A2A; }
+  .dot--other { background: var(--muted); }
+
+  .qty, .badge-sample {
+    font-family: var(--data);
+    font-size: 10px;
+    letter-spacing: .06em;
+    color: var(--muted);
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    padding: 1px 5px;
+  }
+  .badge-sample { color: var(--wine-lift); border-color: rgba(194,74,98,.35); text-transform: uppercase; }
+
+  /* ---------- timeline ---------- */
+
+  .tl { position: relative; height: 26px; }
+  .tl__track {
+    position: absolute;
+    left: 0; right: 0; top: 11px;
+    height: 3px;
+    background: var(--line);
+    border-radius: 2px;
+  }
+  .tl__win {
+    position: absolute;
+    top: 11px;
+    height: 3px;
+    border-radius: 2px;
+    background: rgba(241,232,217,.20);
+  }
+  .tl__peak {
+    position: absolute;
+    top: 7px;
+    height: 11px;
+    border-radius: 2px;
+  }
+  .row--now  .tl__peak { background: rgba(220,166,70,.65); }
+  .row--past .tl__peak { background: rgba(196,87,58,.6); }
+  .row--well .tl__peak { background: rgba(148,169,124,.62); }
+  .row--hold .tl__peak { background: rgba(110,129,154,.55); }
+
+  .tl__now {
+    position: absolute;
+    top: 2px; bottom: 2px;
+    width: 1px;
+    background: var(--gold);
+  }
+  .tl__now::after {
+    content: "";
+    position: absolute;
+    top: -2px; left: -2px;
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--gold);
+  }
+
+  .flag {
+    font-family: var(--ui);
+    font-size: 10px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .flag--past { color: var(--rust); border: 1px solid rgba(196,87,58,.4); }
+  .flag--now  { color: var(--gold); border: 1px solid rgba(220,166,70,.4); }
+  .flag--well { color: var(--sage); border: 1px solid rgba(148,169,124,.35); }
+  .flag--hold { color: var(--slate); border: 1px solid rgba(110,129,154,.35); }
+
+  /* ---------- history ---------- */
+
+  .history { margin: 12px 0 90px; border-top: 1px solid var(--line-soft); padding-top: 22px; }
+  .history summary {
+    font-family: var(--ui);
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    cursor: pointer;
+    list-style: none;
+  }
+  .history summary::-webkit-details-marker { display: none; }
+  .history summary::before { content: "＋ "; color: var(--wine-lift); }
+  .history[open] summary::before { content: "− "; }
+  .history summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+  .hrow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 6px 14px;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--line-soft);
+    width: 100%;
+    background: none;
+    border-left: 0; border-right: 0; border-top: 0;
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+    font: inherit;
+  }
+  .hrow:hover .hrow__name { color: var(--gold); }
+  .hrow:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+  .hrow__name { font-family: var(--display); font-size: 18px; color: var(--cream-dim); transition: color .18s; }
+  .hrow__meta { font-family: var(--data); font-size: 11px; color: var(--muted); margin-left: auto; }
+
+  .empty {
+    border: 1px dashed var(--line);
+    border-radius: 3px;
+    padding: 42px 30px;
+    text-align: center;
+    color: var(--cream-dim);
+  }
+  .empty p { margin: 0 0 8px; }
+  .empty .k { font-family: var(--data); font-size: 13px; color: var(--gold); }
+
+  /* ---------- detail overlay ---------- */
+
+  .scrim {
+    position: fixed;
+    inset: 0;
+    background: rgba(8,6,6,.82);
+    backdrop-filter: blur(3px);
+    display: none;
+    z-index: 40;
+    overflow-y: auto;
+    padding: 40px 20px;
+  }
+  .scrim[data-open="true"] { display: block; }
+
+  .sheet {
+    max-width: 720px;
+    margin: 0 auto;
+    background: var(--ink-2);
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    box-shadow: 0 40px 90px rgba(0,0,0,.6);
+    overflow: hidden;
+    animation: rise .28s cubic-bezier(.2,.7,.3,1) both;
+  }
+  @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+
+  .sheet__top {
+    display: grid;
+    grid-template-columns: 92px minmax(0, 1fr);
+    gap: 24px;
+    padding: 30px 32px 26px;
+    border-bottom: 1px solid var(--line-soft);
+    background: linear-gradient(180deg, rgba(142,35,56,.12), rgba(142,35,56,0));
+    position: relative;
+  }
+  .sheet__photo {
+    width: 92px; height: 134px;
+    border-radius: 2px;
+    overflow: hidden;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    display: grid;
+    place-items: center;
+  }
+  .sheet__photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .sheet__photo svg { width: 40px; height: 96px; }
+
+  .sheet__producer {
+    font-family: var(--ui);
+    font-size: 11px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--wine-lift);
+    margin: 0 0 6px;
+  }
+  .sheet__name {
+    font-family: var(--display);
+    font-size: clamp(26px, 4.4vw, 36px);
+    line-height: 1.12;
+    margin: 0 0 10px;
+    text-wrap: balance;
+  }
+  .sheet__name .vint { font-family: var(--data); font-size: .62em; color: var(--cream-dim); margin-left: 10px; }
+  .sheet__facts {
+    font-family: var(--ui);
+    font-size: 12.5px;
+    color: var(--muted);
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 14px;
+  }
+
+  .close {
+    position: absolute;
+    top: 14px; right: 14px;
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    background: var(--panel);
+    color: var(--cream-dim);
+    font-size: 15px;
+    line-height: 1;
+    cursor: pointer;
+  }
+  .close:hover { color: var(--cream); border-color: var(--muted); }
+  .close:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+  .sheet__body { padding: 28px 32px 34px; display: flex; flex-direction: column; gap: 30px; }
+
+  .lab {
+    font-family: var(--ui);
+    font-size: 10.5px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 10px;
+  }
+  .prose { margin: 0; color: var(--cream); max-width: 64ch; }
+
+  .scorewrap { display: flex; align-items: flex-end; gap: 16px; flex-wrap: wrap; }
+  .score {
+    font-family: var(--data);
+    font-size: 38px;
+    line-height: 1;
+    color: var(--gold);
+    font-variant-numeric: tabular-nums;
+  }
+  .score small { font-size: 14px; color: var(--muted); }
+  .basis { font-family: var(--ui); font-size: 12px; color: var(--muted); max-width: 40ch; }
+
+  .bigtl { position: relative; height: 62px; margin-top: 4px; }
+  .bigtl__track { position: absolute; left: 0; right: 0; top: 24px; height: 4px; background: var(--line); border-radius: 2px; }
+  .bigtl__win { position: absolute; top: 24px; height: 4px; border-radius: 2px; background: rgba(241,232,217,.22); }
+  .bigtl__peak { position: absolute; top: 18px; height: 16px; border-radius: 2px; background: rgba(220,166,70,.55); }
+  .bigtl__now { position: absolute; top: 10px; height: 32px; width: 1px; background: var(--gold); }
+  .bigtl__now b {
+    position: absolute; top: -18px; left: 50%; transform: translateX(-50%);
+    font-family: var(--ui); font-size: 10px; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--gold); white-space: nowrap; font-weight: 500;
+  }
+  .bigtl__tick {
+    position: absolute; top: 40px; transform: translateX(-50%);
+    font-family: var(--data); font-size: 11px; color: var(--muted);
+  }
+  .winnote { font-family: var(--ui); font-size: 12.5px; color: var(--muted); margin: 6px 0 0; max-width: 60ch; }
+
+  .pairs { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .pair {
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    padding: 18px 20px;
+    background: var(--panel);
+  }
+  .pair--offbeat { background: linear-gradient(180deg, rgba(142,35,56,.16), rgba(142,35,56,.04)); border-color: rgba(194,74,98,.28); }
+  .pair h4 {
+    font-family: var(--ui);
+    font-size: 10.5px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    margin: 0 0 9px;
+    color: var(--cream-dim);
+  }
+  .pair--offbeat h4 { color: var(--wine-lift); }
+  .pair p { margin: 0; font-size: 15.5px; line-height: 1.55; }
+
+  /* ---------- table talk ---------- */
+
+  .talk { display: flex; flex-direction: column; }
+  .talk li {
+    list-style: none;
+    padding: 15px 0;
+    border-top: 1px solid var(--line-soft);
+  }
+  .talk li:last-child { border-bottom: 1px solid var(--line-soft); }
+  .talk__kicker {
+    font-family: var(--ui);
+    font-size: 10px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--wine-lift);
+    display: block;
+    margin-bottom: 6px;
+  }
+  .talk p { margin: 0; font-size: 15.5px; line-height: 1.6; max-width: 62ch; }
+  .talk ul { margin: 0; padding: 0; }
+
+  .foot {
+    padding: 30px 0 70px;
+    border-top: 1px solid var(--line-soft);
+    font-family: var(--ui);
+    font-size: 11.5px;
+    letter-spacing: .06em;
+    color: var(--muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+  }
+
+  @media (max-width: 780px) {
+    body { font-size: 16px; }
+    .wrap { padding: 0 18px; }
+    .mast { padding: 46px 0 30px; }
+    .row {
+      grid-template-columns: 44px minmax(0, 1fr);
+      grid-template-areas: "ph info" "tl tl";
+      row-gap: 12px;
+      column-gap: 15px;
+    }
+    .row__photo { grid-area: ph; width: 44px; height: 64px; }
+    .row__info { grid-area: info; }
+    .tl { grid-area: tl; }
+    .ruler, .rack__lines { display: none; }
+    .sheet__top { grid-template-columns: 68px minmax(0,1fr); gap: 18px; padding: 26px 20px 22px; }
+    .sheet__photo { width: 68px; height: 100px; }
+    .sheet__body { padding: 24px 20px 30px; }
+    .pairs { grid-template-columns: 1fr; }
+    .scrim { padding: 16px 12px 40px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+  }
+</style>
+
+<div class="wrap">
+  <header class="mast">
+    <p class="mast__mark">The Cellar</p>
+    <h1 class="mast__thesis" id="thesis"></h1>
+    <p class="mast__meta" id="mastmeta"></p>
+  </header>
+
+  <div class="controls">
+    <input class="search" id="q" type="search" placeholder="Search producer, region, grape, a pairing…" aria-label="Search the cellar">
+    <div class="filters" id="filters"></div>
+  </div>
+
+  <main id="racks"></main>
+
+  <details class="history" id="history">
+    <summary id="histsum">History</summary>
+    <div id="histbody"></div>
+  </details>
+
+  <footer class="foot" id="foot"></footer>
+</div>
+
+<div class="scrim" id="scrim" role="dialog" aria-modal="true" aria-labelledby="sheetname" data-open="false">
+  <div class="sheet" id="sheet"></div>
+</div>
+
+<script>
+  const DATA = /*__WINES__*/{ wines: [] };
+  const PHOTOS = /*__PHOTOS__*/{};
+  const BUILT = "/*__BUILT__*/";
+
+  const WINES = (DATA.wines || []);
+
+  const TYPE_LABEL = {
+    red: "Red", white: "White", rose: "Rosé", sparkling: "Sparkling",
+    dessert: "Dessert", fortified: "Fortified", orange: "Orange"
+  };
+
+  const now = new Date();
+  const NOWY = now.getFullYear() + now.getMonth() / 12;
+
+  const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, c => (
+    { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]
+  ));
+
+  const WORDS = ["No", "One", "Two", "Three", "Four", "Five", "Six", "Seven",
+                 "Eight", "Nine", "Ten", "Eleven", "Twelve"];
+  const word = (n) => (n < WORDS.length ? WORDS[n] : String(n));
+
+  function bottleSvg(type) {
+    const fills = {
+      red: "#7B1E32", white: "#D8C98A", rose: "#E0A0A6", sparkling: "#E8D9A0",
+      dessert: "#C99B4A", fortified: "#6E2A2A", orange: "#C98A4A"
+    };
+    const f = fills[type] || "#6C6058";
+    return '<svg viewBox="0 0 24 58" aria-hidden="true">' +
+      '<path d="M9 2h6v13c0 3 4 6 4 12v27a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V27c0-6 4-9 4-12V2z" ' +
+      'fill="' + f + '" opacity=".38"/>' +
+      '<path d="M9 2h6v13c0 3 4 6 4 12v27a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V27c0-6 4-9 4-12V2z" ' +
+      'fill="none" stroke="' + f + '" stroke-width="1.2" opacity=".8"/>' +
+      '<rect x="5" y="34" width="14" height="16" fill="' + f + '" opacity=".25"/></svg>';
+  }
+
+  /* ---- urgency ---------------------------------------------------------- */
+
+  function classify(w) {
+    const win = w.window || {};
+    if (win.start == null || win.end == null) return "well";
+    const endY = win.end + 1;                  // windows are inclusive of the end year
+    const peakEnd = win.peak_end != null ? win.peak_end + 1 : null;
+    if (win.start > NOWY) return "hold";
+    if (endY < NOWY) return "past";
+    if (peakEnd && peakEnd < NOWY) return "now";
+    if (endY - NOWY <= 1) return "now";
+    return "well";
+  }
+
+  const GROUPS = [
+    { key: "now", cls: "rack--now", title: "Drink now",
+      say: "Past peak, or the window closes within a year. Open these first." },
+    { key: "well", cls: "rack--well", title: "Drinking well",
+      say: "In the window and in no hurry. Reach for these on a normal evening." },
+    { key: "hold", cls: "rack--hold", title: "Hold",
+      say: "Not open yet. Leave them alone." }
+  ];
+
+  const FLAG = {
+    past: ["flag--past", "Past window"],
+    now:  ["flag--now", "Drink now"],
+    well: ["flag--well", "Drinking well"],
+    hold: ["flag--hold", "Hold"]
+  };
+
+  /* ---- shared year scale ------------------------------------------------ */
+
+  function scale(list) {
+    let lo = Math.floor(NOWY), hi = Math.ceil(NOWY);
+    list.forEach(w => {
+      const win = w.window || {};
+      if (win.start != null) lo = Math.min(lo, win.start);
+      if (win.end != null) hi = Math.max(hi, win.end + 1);
+    });
+    lo -= 1; hi += 1;
+    if (hi - lo < 6) hi = lo + 6;
+    return { lo, hi, pct: (y) => ((y - lo) / (hi - lo)) * 100 };
+  }
+
+  function ticks(s) {
+    const span = s.hi - s.lo;
+    const step = span <= 12 ? 2 : span <= 26 ? 5 : span <= 60 ? 10 : 20;
+    const out = [];
+    for (let y = Math.ceil(s.lo / step) * step; y <= s.hi; y += step) out.push(y);
+    return out;
+  }
+
+  /* ---- state ------------------------------------------------------------ */
+
+  let query = "";
+  let typeFilter = "all";
+
+  const cellar = () => WINES.filter(w => w.status !== "consumed");
+  const drunk = () => WINES.filter(w => w.status === "consumed");
+
+  function matches(w) {
+    if (typeFilter !== "all" && w.type !== typeFilter) return false;
+    if (!query) return true;
+    const hay = [w.producer, w.name, w.region, w.notes, w.pairing_classic,
+                 w.pairing_offbeat, w.vintage, (w.varietals || []).join(" "),
+                 (w.anecdotes || []).map(a => a.kicker + " " + a.text).join(" ")]
+      .join(" ").toLowerCase();
+    return query.toLowerCase().split(/\s+/).every(t => hay.includes(t));
+  }
+
+  /* ---- rendering -------------------------------------------------------- */
+
+  function rowHtml(w, s) {
+    const g = classify(w);
+    const win = w.window || {};
+    const [flagCls, flagText] = FLAG[g];
+    const photo = PHOTOS[w.id]
+      ? '<img src="' + PHOTOS[w.id] + '" alt="">'
+      : bottleSvg(w.type);
+
+    let tl = '<div class="tl"><div class="tl__track"></div>';
+    if (win.start != null && win.end != null) {
+      const a = s.pct(win.start), b = s.pct(win.end + 1);
+      tl += '<div class="tl__win" style="left:' + a + '%;width:' + Math.max(b - a, 0.6) + '%"></div>';
+      if (win.peak_start != null && win.peak_end != null) {
+        const pa = s.pct(win.peak_start), pb = s.pct(win.peak_end + 1);
+        tl += '<div class="tl__peak" style="left:' + pa + '%;width:' + Math.max(pb - pa, 0.6) + '%"></div>';
+      }
+    }
+    tl += '<div class="tl__now" style="left:' + s.pct(NOWY) + '%"></div></div>';
+
+    const span = (win.start != null && win.end != null) ? win.start + "–" + win.end : "window unknown";
+    const peak = (win.peak_end != null) ? "peak through " + win.peak_end : null;
+
+    return '<button type="button" class="row row--' + g + '" data-id="' + esc(w.id) + '">' +
+      '<span class="row__photo">' + photo + '</span>' +
+      '<span class="row__info">' +
+        '<span class="row__producer">' +
+          '<i class="dot dot--' + (TYPE_LABEL[w.type] ? w.type : "other") + '"></i>' +
+          esc(w.producer) +
+          (w.quantity > 1 ? '<i class="qty">×' + w.quantity + '</i>' : '') +
+          (w.sample ? '<i class="badge-sample">sample</i>' : '') +
+        '</span>' +
+        '<span class="row__name">' + esc(w.name) +
+          '<i class="vint">' + (w.vintage || "NV") + '</i></span>' +
+        '<span class="row__sub">' +
+          '<i class="' + flagCls + ' flag">' + flagText + '</i>' +
+          '<i>' + esc(w.region) + '</i>' +
+          '<i class="span">' + span + (peak ? " · " + peak : "") + '</i>' +
+        '</span>' +
+      '</span>' + tl + '</button>';
+  }
+
+  function render() {
+    const visible = cellar().filter(matches);
+    const s = scale(cellar());
+
+    /* masthead */
+    const nowCount = cellar().filter(w => ["now", "past"].includes(classify(w))).length;
+    const bottles = cellar().reduce((n, w) => n + (w.quantity || 1), 0);
+    document.getElementById("thesis").innerHTML = cellar().length === 0
+      ? "The cellar is <em>empty</em>."
+      : nowCount === 0
+        ? "Nothing is <em>urgent</em>. Drink what you like."
+        : word(nowCount) + (nowCount === 1 ? " bottle is <em>asking</em> to be opened." : " bottles are <em>asking</em> to be opened.");
+
+    document.getElementById("mastmeta").innerHTML =
+      "<span><b>" + bottles + "</b> bottle" + (bottles === 1 ? "" : "s") + " in the cellar</span>" +
+      "<span><b>" + cellar().length + "</b> distinct wine" + (cellar().length === 1 ? "" : "s") + "</span>" +
+      "<span>Scale <b>" + s.lo + "–" + s.hi + "</b></span>";
+
+    /* type filters */
+    const types = [...new Set(cellar().map(w => w.type))];
+    const fbox = document.getElementById("filters");
+    if (fbox.childElementCount !== types.length + 1) {
+      fbox.innerHTML = ['all', ...types].map(t =>
+        '<button type="button" class="chip" data-type="' + t + '" aria-pressed="' +
+        (t === typeFilter) + '">' + (t === "all" ? "All" : (TYPE_LABEL[t] || t)) + '</button>'
+      ).join("");
+    } else {
+      fbox.querySelectorAll(".chip").forEach(c =>
+        c.setAttribute("aria-pressed", String(c.dataset.type === typeFilter)));
+    }
+
+    /* racks */
+    const host = document.getElementById("racks");
+    if (cellar().length === 0) {
+      host.innerHTML = '<div class="empty"><p>No bottles yet.</p>' +
+        '<p class="k">Post a photo of a label in Claude Code and it will appear here.</p></div>';
+    } else if (visible.length === 0) {
+      host.innerHTML = '<div class="empty"><p>Nothing matches that.</p></div>';
+    } else {
+      const tk = ticks(s);
+      const ruler = '<div class="ruler">' + tk.map(y =>
+        '<span style="left:' + s.pct(y) + '%">' + y + '</span>').join("") + '</div>';
+      const lines = '<div class="rack__lines">' +
+        tk.map(y => '<i style="left:' + s.pct(y) + '%"></i>').join("") +
+        '<i class="today" style="left:' + s.pct(NOWY) + '%"></i></div>';
+
+      host.innerHTML = GROUPS.map(gr => {
+        const items = visible
+          .filter(w => (gr.key === "now" ? ["now", "past"] : [gr.key]).includes(classify(w)))
+          .sort((a, b) => {
+            const pa = classify(a) === "past" ? 0 : 1, pb = classify(b) === "past" ? 0 : 1;
+            if (gr.key === "now" && pa !== pb) return pa - pb;
+            const ea = (a.window || {}).end ?? 9999, eb = (b.window || {}).end ?? 9999;
+            return gr.key === "hold"
+              ? ((a.window || {}).start ?? 9999) - ((b.window || {}).start ?? 9999)
+              : ea - eb;
+          });
+        if (!items.length) return "";
+        return '<section class="rack ' + gr.cls + '">' +
+          '<div class="rack__head"><h2 class="rack__title">' + gr.title + '</h2>' +
+          '<span class="rack__count">' + items.length + '</span></div>' +
+          '<p class="rack__say">' + gr.say + '</p>' + ruler +
+          '<div class="rack__body">' + lines + items.map(w => rowHtml(w, s)).join("") + '</div>' +
+          '</section>';
+      }).join("");
+    }
+
+    /* history */
+    const past = drunk();
+    const hist = document.getElementById("history");
+    hist.style.display = past.length ? "" : "none";
+    document.getElementById("histsum").textContent =
+      "History — " + past.length + " opened";
+    document.getElementById("histbody").innerHTML = past
+      .sort((a, b) => String(b.consumed_date).localeCompare(String(a.consumed_date)))
+      .map(w => '<button type="button" class="hrow" data-id="' + esc(w.id) + '">' +
+        '<span class="hrow__name">' + esc(w.producer) + " " + esc(w.name) + '</span>' +
+        '<span class="hrow__meta">' + (w.vintage || "NV") +
+        (w.consumed_date ? " · opened " + fmtDate(w.consumed_date) : "") + '</span></button>').join("");
+
+    document.getElementById("foot").innerHTML =
+      "<span>Updated " + esc(BUILT) + "</span>" +
+      "<span>Windows, ratings, pairings and table talk are researched estimates — " +
+      "check anything you plan to say out loud.</span>";
+  }
+
+  function fmtDate(iso) {
+    const d = new Date(iso + "T00:00:00");
+    if (isNaN(d)) return iso;
+    return d.toLocaleDateString(undefined, { day: "numeric", month: "long", year: "numeric" });
+  }
+
+  /* ---- detail sheet ----------------------------------------------------- */
+
+  function sheetHtml(w) {
+    const win = w.window || {};
+    const g = classify(w);
+    const [flagCls, flagText] = FLAG[g];
+    const photo = PHOTOS[w.id] ? '<img src="' + PHOTOS[w.id] + '" alt="">' : bottleSvg(w.type);
+
+    let big = "";
+    if (win.start != null && win.end != null) {
+      const lo = Math.min(win.start, Math.floor(NOWY)) - 1;
+      const hi = Math.max(win.end + 1, Math.ceil(NOWY)) + 1;
+      const p = (y) => ((y - lo) / (hi - lo)) * 100;
+      const a = p(win.start), b = p(win.end + 1);
+      big = '<div class="bigtl"><div class="bigtl__track"></div>' +
+        '<div class="bigtl__win" style="left:' + a + '%;width:' + (b - a) + '%"></div>' +
+        (win.peak_start != null && win.peak_end != null
+          ? '<div class="bigtl__peak" style="left:' + p(win.peak_start) + '%;width:' +
+            (p(win.peak_end + 1) - p(win.peak_start)) + '%"></div>' : "") +
+        '<div class="bigtl__now" style="left:' + p(NOWY) + '%"><b>today</b></div>' +
+        '<span class="bigtl__tick" style="left:' + a + '%">' + win.start + '</span>' +
+        '<span class="bigtl__tick" style="left:' + b + '%">' + win.end + '</span>' +
+        '</div>';
+    }
+
+    const rating = w.rating || {};
+    const shown = rating.personal != null ? rating.personal : rating.score;
+    const basis = rating.personal != null ? "your score" : (rating.basis || "estimated");
+
+    return '<div class="sheet__top">' +
+      '<button type="button" class="close" id="closeBtn" aria-label="Close">✕</button>' +
+      '<div class="sheet__photo">' + photo + '</div>' +
+      '<div><p class="sheet__producer">' + esc(w.producer) + '</p>' +
+      '<h2 class="sheet__name" id="sheetname">' + esc(w.name) +
+        '<span class="vint">' + (w.vintage || "NV") + '</span></h2>' +
+      '<p class="sheet__facts">' +
+        '<span class="' + flagCls + ' flag">' + flagText + '</span>' +
+        '<span>' + esc(w.region) + '</span>' +
+        '<span>' + esc((w.varietals || []).join(", ")) + '</span>' +
+        (w.abv ? '<span>' + w.abv + '% ABV</span>' : '') +
+        (w.quantity > 1 ? '<span>' + w.quantity + ' bottles</span>' : '') +
+      '</p></div></div>' +
+
+      '<div class="sheet__body">' +
+        '<section><p class="lab">Tasting notes</p><p class="prose">' + esc(w.notes) + '</p></section>' +
+        '<section><p class="lab">Drinking window</p>' + big +
+          (win.note ? '<p class="winnote">' + esc(win.note) + '</p>' : '') + '</section>' +
+        (shown != null
+          ? '<section><p class="lab">Rating</p><div class="scorewrap">' +
+            '<span class="score">' + shown + '<small>/100</small></span>' +
+            '<span class="basis">' + esc(basis) + '</span></div></section>' : '') +
+        '<section><p class="lab">What to eat with it</p><div class="pairs">' +
+          '<div class="pair"><h4>Classic</h4><p>' + esc(w.pairing_classic) + '</p></div>' +
+          '<div class="pair pair--offbeat"><h4>Offbeat</h4><p>' + esc(w.pairing_offbeat) + '</p></div>' +
+        '</div></section>' +
+        ((w.anecdotes || []).length
+          ? '<section class="talk"><p class="lab">Table talk</p><ul>' +
+            w.anecdotes.map(a => '<li><span class="talk__kicker">' + esc(a.kicker) +
+              '</span><p>' + esc(a.text) + '</p></li>').join("") +
+            '</ul></section>' : '') +
+        (w.status === "consumed" && w.consumed_date
+          ? '<section><p class="lab">Opened</p><p class="prose">' + fmtDate(w.consumed_date) + '</p></section>' : '') +
+      '</div>';
+  }
+
+  const scrim = document.getElementById("scrim");
+  let lastFocus = null;
+
+  /* Deep links are a nicety. In a sandboxed frame the history API throws on an
+     opaque origin, so every hash operation degrades to a no-op. */
+  function setHash(value) {
+    try {
+      history.replaceState(null, "", value || location.pathname + location.search);
+    } catch (_) { /* opaque origin — deep linking unavailable */ }
+  }
+  function readHash() {
+    try { return location.hash; } catch (_) { return ""; }
+  }
+
+  function open(id) {
+    const w = WINES.find(x => x.id === id);
+    if (!w) return;
+    lastFocus = document.activeElement;
+    document.getElementById("sheet").innerHTML = sheetHtml(w);
+    scrim.dataset.open = "true";
+    document.body.style.overflow = "hidden";
+    if (readHash() !== "#w/" + id) setHash("#w/" + id);
+    const btn = document.getElementById("closeBtn");
+    if (btn) { btn.addEventListener("click", close); btn.focus(); }
+  }
+
+  function close() {
+    scrim.dataset.open = "false";
+    document.body.style.overflow = "";
+    if (readHash()) setHash(null);
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+
+  document.addEventListener("click", (e) => {
+    const row = e.target.closest("[data-id]");
+    if (row) { open(row.dataset.id); return; }
+    const chip = e.target.closest(".chip");
+    if (chip) { typeFilter = chip.dataset.type; render(); return; }
+    if (e.target === scrim) close();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && scrim.dataset.open === "true") close();
+  });
+
+  document.getElementById("q").addEventListener("input", (e) => {
+    query = e.target.value.trim();
+    render();
+  });
+
+  render();
+  const entryHash = readHash();
+  if (entryHash.startsWith("#w/")) open(decodeURIComponent(entryHash.slice(3)));
+</script>

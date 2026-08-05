@@ -1,0 +1,7 @@
+{
+  "database": "dolt",
+  "backend": "dolt",
+  "dolt_mode": "embedded",
+  "dolt_database": "wine_cellar",
+  "project_id": "a38ec2e3-69e5-4830-b91b-a669da56a461"
+}

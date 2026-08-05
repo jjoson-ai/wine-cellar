@@ -1,0 +1,795 @@
+{
+  "schema_version": 1,
+  "wines": [
+    {
+      "id": "pol-roger-rose-2012",
+      "producer": "Pol Roger",
+      "name": "Rosé",
+      "vintage": 2012,
+      "type": "sparkling",
+      "region": "Champagne (Épernay), France",
+      "varietals": ["Pinot Noir", "Chardonnay"],
+      "abv": null,
+      "quantity": 1,
+      "status": "cellar",
+      "consumed_date": null,
+      "photo": "photos/pol-roger-rose-2012.jpg",
+      "window": {
+        "start": 2020,
+        "end": 2032,
+        "peak_start": 2022,
+        "peak_end": 2028,
+        "confidence": "high",
+        "note": "2012 was a small, superb Champagne vintage. A vintage rosé at fourteen years is at its savoury apex — gorgeous now, and it will cruise past 2030 if kept cool and dark."
+      },
+      "rating": { "score": 93, "basis": "estimated — house, cuvée and vintage reputation", "personal": null },
+      "notes": "Mature vintage rosé in full voice: the salmon pink is edging toward onion skin, wild strawberry and blood orange have picked up brioche, hazelnut and a savoury pinot depth, and the mousse has softened to cream. More a wine with bubbles than a party sparkler — serve it not too cold.",
+      "pairing_classic": "Whole roast chicken with tarragon, or lamb cutlets cooked pink.",
+      "pairing_offbeat": "Lechon, skin priority. The mousse scrubs the fat, the pinot core stands up to the roast, and a fourteen-year-old rosé has enough savoury depth to talk to the liver sauce.",
+      "anecdotes": [
+        {
+          "kicker": "Churchill's house",
+          "text": "Pol Roger was Winston Churchill's champagne — he bought it by the pallet, named a racehorse after it (the horse won), and called the house's address 'the world's most drinkable'. When he died in 1965, Pol Roger put a black border on every label shipped to Britain, and later named its prestige cuvée Sir Winston Churchill."
+        },
+        {
+          "kicker": "The neck label",
+          "text": "The royal warrant on the shoulder — 'By Appointment to H.M. Queen Elizabeth II' — wasn't ceremonial: Pol Roger poured at the 2011 wedding of William and Kate. The house kept the late Queen's warrant on bottlings from her era."
+        },
+        {
+          "kicker": "The collapse",
+          "text": "In February 1900 Pol Roger's Épernay cellars caved in overnight, swallowing about 1.5 million bottles and five hundred casks. The house dug new cellars 33 metres down — among the deepest and coldest in Champagne, part of why its wines age so slowly."
+        },
+        {
+          "kicker": "The vintage",
+          "text": "2012 nearly didn't happen: frost, hail and mildew wrecked the spring, then a flawless late summer saved a tiny, concentrated crop. Growers rank it with 2002 and 2008 among the century's best — small harvest, long memory."
+        }
+      ],
+      "added": "2026-08-05",
+      "sample": false
+    },
+    {
+      "id": "grand-bateau-bordeaux-2018",
+      "producer": "Grand Bateau",
+      "name": "Bordeaux",
+      "vintage": 2018,
+      "type": "red",
+      "region": "Bordeaux, France",
+      "varietals": ["Merlot", "Cabernet Sauvignon"],
+      "abv": null,
+      "quantity": 1,
+      "status": "cellar",
+      "consumed_date": null,
+      "photo": "photos/grand-bateau-bordeaux-2018.jpg",
+      "window": {
+        "start": 2020,
+        "end": 2026,
+        "peak_start": 2021,
+        "peak_end": 2025,
+        "confidence": "medium",
+        "note": "Branded AOC Bordeaux runs five to eight years; 2018's ripeness bought it the extra year, and that year is now up."
+      },
+      "rating": { "score": 87, "basis": "estimated — producer and vintage reputation", "personal": null },
+      "notes": "Merlot-led claret in its easy chair: plum, cedar shavings, a little tobacco leaf, tannins already melted. It hit its stride around 2023 and is coasting now — open it, don't cellar it, and keep the decant short.",
+      "pairing_classic": "Steak frites, bavette cooked rare.",
+      "pairing_offbeat": "Tortang talong with giniling. Smoky grilled eggplant does for mellow Merlot what char always does — it adds back the savoury edge the wine has traded for softness.",
+      "anecdotes": [
+        {
+          "kicker": "The ship",
+          "text": "The dragon-prowed boat is Château Beychevelle's emblem. Legend has it ships on the Gironde lowered their sails — baisse-voile — to salute the estate's owner, the Duke of Épernon, Grand Admiral of France; the château's name and the boat both come from that salute. Grand Bateau is the Beychevelle team's everyday label."
+        },
+        {
+          "kicker": "The vintage",
+          "text": "2018 in Bordeaux was a rescue story: a mildew-soaked spring that ruined nerves and some crops, then a scorching summer that saved everything left. Growers say they aged a decade in six months and then made one of the ripest vintages of the era."
+        }
+      ],
+      "added": "2026-08-05",
+      "sample": false
+    },
+    {
+      "id": "ventisquero-soul-andes-carmenere-2023",
+      "producer": "Ventisquero",
+      "name": "Soul of the Andes Reserva Carménère",
+      "vintage": 2023,
+      "type": "red",
+      "region": "Valle de Colchagua, Chile",
+      "varietals": ["Carménère"],
+      "abv": null,
+      "quantity": 1,
+      "status": "cellar",
+      "consumed_date": null,
+      "photo": "photos/ventisquero-soul-andes-carmenere-2023.jpg",
+      "window": {
+        "start": 2024,
+        "end": 2028,
+        "peak_start": 2024,
+        "peak_end": 2027,
+        "confidence": "medium",
+        "note": "Entry-level reserva built for early drinking; the herbal edge gets louder rather than softer with age."
+      },
+      "rating": { "score": 87, "basis": "estimated — producer tier and vintage", "personal": null },
+      "notes": "Deep purple and unmistakably Carménère: blackberry and plum over roasted red pepper, sweet paprika and a dusting of cocoa. Soft-grained tannin, made to be friendly young — not a wine to overthink, a wine to pour.",
+      "pairing_classic": "Chilean asado — grilled flank steak with pebre — or beef empanadas.",
+      "pairing_offbeat": "Crispy duck in hoisin wraps. The grape's roasted-pepper note behaves like an extra spoonful of hoisin, and the wine's plushness rides the pancake's sweetness.",
+      "anecdotes": [
+        {
+          "kicker": "The grape",
+          "text": "Carménère is Bordeaux's lost grape. Phylloxera wiped it from France in the 1860s and it was presumed extinct — until 1994, when ampelographer Jean-Michel Boursiquot looked at a Chilean 'Merlot' vineyard and realized half of it was Carménère that had been hiding under the wrong name for a century."
+        },
+        {
+          "kicker": "The name",
+          "text": "Carménère comes from carmin — crimson — for the scarlet blaze of its leaves each autumn. Vineyards of it look like they're on fire in May, Chile's autumn."
+        },
+        {
+          "kicker": "The producer",
+          "text": "Ventisquero means 'glacier' — the winery named itself after the ice fields of the southern Andes, and its top wines all carry mountain imagery. The climber on this label is the house's signature."
+        }
+      ],
+      "added": "2026-08-05",
+      "sample": false
+    },
+    {
+      "id": "sanama-reserva-cab-2021",
+      "producer": "Sanama",
+      "name": "Reserva Cabernet Sauvignon",
+      "vintage": 2021,
+      "type": "red",
+      "region": "Cachapoal Andes, Chile",
+      "varietals": ["Cabernet Sauvignon"],
+      "abv": null,
+      "quantity": 1,
+      "status": "cellar",
+      "consumed_date": null,
+      "photo": "photos/sanama-reserva-cab-2021.jpg",
+      "window": {
+        "start": 2023,
+        "end": 2028,
+        "peak_start": 2024,
+        "peak_end": 2027,
+        "confidence": "medium",
+        "note": "Reserva-level Chilean cabernet is best inside five or six years, while the fruit still leads the herbs."
+      },
+      "rating": { "score": 86, "basis": "estimated — producer tier and vintage", "personal": null },
+      "notes": "Cassis and dried herbs with a graphite line down the middle; medium-bodied, brisk acidity off cool Andean nights, a clean and faintly dusty finish. Honest Tuesday cabernet that punches at its price.",
+      "pairing_classic": "Ribeye with chimichurri.",
+      "pairing_offbeat": "Filipino barbecue skewers with the banana-ketchup glaze charred at the edges — the sweet-sour lacquer locks onto the cassis and the grill smoke ties the knot.",
+      "anecdotes": [
+        {
+          "kicker": "The place",
+          "text": "Cachapoal Andes is the foothill side of the valley, where cold mountain air pours down every night — the swing between afternoon and dawn can pass 20°C. That free refrigeration is why Chilean cabernet at this price still tastes fresh."
+        },
+        {
+          "kicker": "The word",
+          "text": "'Reserva' on a Chilean label is a courtesy, not a law — unlike Spain, where the word is policed with minimum barrel and bottle time. In Chile it mostly means 'the step above our base wine'. Useful to know before it impresses anyone."
+        },
+        {
+          "kicker": "The roots",
+          "text": "Chile is one of the last places on earth where Cabernet grows on its own roots. Phylloxera never made it past the Atacama, the Andes and the Pacific, so vines here skip the grafting every European vineyard depends on."
+        }
+      ],
+      "added": "2026-08-05",
+      "sample": false
+    },
+    {
+      "id": "kloster-eberbach-berg-rottland-gg-2018",
+      "producer": "Kloster Eberbach",
+      "name": "Rüdesheimer Berg Rottland Spätburgunder GG",
+      "vintage": 2018,
+      "type": "red",
+      "region": "Rüdesheim, Rheingau, Germany",
+      "varietals": ["Spätburgunder (Pinot Noir)"],
+      "abv": null,
+      "quantity": 1,
+      "status": "cellar",
+      "consumed_date": null,
+      "photo": "photos/kloster-eberbach-berg-rottland-gg-2018.jpg",
+      "window": {
+        "start": 2021,
+        "end": 2032,
+        "peak_start": 2023,
+        "peak_end": 2029,
+        "confidence": "medium",
+        "note": "Grosses Gewächs Spätburgunder from the warm 2018 vintage: open now, with the tertiary spice due after 2027."
+      },
+      "rating": { "score": 92, "basis": "estimated — grand cru site and strong vintage", "personal": null },
+      "notes": "German Pinot at full stretch: black cherry and rosehip, forest floor, a smoky mineral thread off the slate-and-quartzite slope above Rüdesheim. Silkier than village Burgundy at the same age, with 2018's warmth filling out the mid-palate.",
+      "pairing_classic": "Duck breast with cherry jus, or roast goose.",
+      "pairing_offbeat": "Unagi kabayaki over rice. The eel's sweet soy glaze and charcoal edge are exactly what silky Spätburgunder wants — a sommelier party trick that never misses.",
+      "anecdotes": [
+        {
+          "kicker": "The producer",
+          "text": "This may be the world's oldest working wine estate: Cistercian monks founded Kloster Eberbach in 1136 and it has brought in a harvest every year since — nearly nine hundred vintages. Today it's run as the Hessian state winery."
+        },
+        {
+          "kicker": "The word Kabinett",
+          "text": "The German wine term Kabinett was born in this cellar. From 1730 the abbey locked its finest casks in a vault called the Cabinet — the Cabinetkeller on this label — and 'Cabinet wine' eventually became a legal category for the whole country."
+        },
+        {
+          "kicker": "The film",
+          "text": "The Name of the Rose was filmed in the abbey — the monastery interiors around Sean Connery are Kloster Eberbach's real cloisters and dormitory. The winery leans into it; there's a wine named Umberto in the shop."
+        },
+        {
+          "kicker": "The vineyard",
+          "text": "Berg Rottland takes its name from roden — 'to clear'. It's the medieval clearing above Rüdesheim, vines since at least the 11th century, and one of the warmest slopes on the Rhine."
+        }
+      ],
+      "added": "2026-08-05",
+      "sample": false
+    },
+    {
+      "id": "hardys-brave-new-world-shiraz-2019",
+      "producer": "Hardys",
+      "name": "Brave New World Shiraz Black",
+      "vintage": 2019,
+      "type": "red",
+      "region": "McLaren Vale, South Australia",
+      "varietals": ["Shiraz"],
+      "abv": null,
+      "quantity": 1,
+      "status": "cellar",
+      "consumed_date": null,
+      "photo": "photos/hardys-brave-new-world-shiraz-2019.jpg",
+      "window": {
+        "start": 2021,
+        "end": 2029,
+        "peak_start": 2022,
+        "peak_end": 2027,
+        "confidence": "medium",
+        "note": "Dense regional McLaren Vale shiraz holds on fruit through the late 2020s; no reward for waiting past that."
+      },
+      "rating": { "score": 88, "basis": "estimated — regional tier and vintage", "personal": null },
+      "notes": "McLaren Vale in one glass: blackberry jam cut with dark chocolate, licorice and a eucalyptus lift. 'Black' is truth in labelling — inky, plush, generously oaked, zero minimalism.",
+      "pairing_classic": "Pepper-crusted lamb rump, or beef ribs off the smoker.",
+      "pairing_offbeat": "Char siu, burnt ends included. Maltose lacquer and five-spice meet shiraz jam and sweet oak — the same flavour built from two directions.",
+      "anecdotes": [
+        {
+          "kicker": "The name",
+          "text": "The 'brave new world' is Thomas Hardy's own story: he landed in Adelaide in 1850, twenty years old, drove cattle for wages, and by 1853 owned river land at Bankside. He died the acknowledged father of the South Australian wine industry."
+        },
+        {
+          "kicker": "The chocolate note",
+          "text": "McLaren Vale shiraz genuinely tastes of dark chocolate — it's the region's calling card, from warm ripening over ancient soils. Locals lean into it and serve the wines with chocolate desserts, which sounds wrong and works."
+        },
+        {
+          "kicker": "The bottle's life",
+          "text": "This line lives almost entirely in travel retail — it's a wine that has passed through more duty-frees than most pilots. If it looks unfamiliar in shops, that's why."
+        }
+      ],
+      "added": "2026-08-05",
+      "sample": false
+    },
+    {
+      "id": "ysios-los-prados-2015",
+      "producer": "Bodegas Ysios",
+      "name": "Los Prados",
+      "vintage": 2015,
+      "type": "red",
+      "region": "Rioja Alavesa, Spain",
+      "varietals": ["Tempranillo"],
+      "abv": null,
+      "quantity": 1,
+      "status": "cellar",
+      "consumed_date": null,
+      "photo": "photos/ysios-los-prados-2015.jpg",
+      "window": {
+        "start": 2019,
+        "end": 2030,
+        "peak_start": 2021,
+        "peak_end": 2028,
+        "confidence": "medium",
+        "note": "2015 was a warm, excellent Rioja vintage; a reserva-level Alavesa tempranillo sits on its plateau for most of a decade."
+      },
+      "rating": { "score": 90, "basis": "estimated — producer and strong vintage", "personal": null },
+      "notes": "Modern Rioja Alavesa: black cherry with balsamic depth, vanilla and a coconut whisper from oak that has now folded in, chalk-fine tannin off limestone under the Sierra de Cantabria. Eleven years on it's fully assembled.",
+      "pairing_classic": "Roast lamb, or jamón ibérico with aged Manchego.",
+      "pairing_offbeat": "Beef kaldereta. The liver-spread richness in the sauce is practically Rioja's soulmate — tempranillo's acid cuts it, the oak's vanilla rounds the chilli.",
+      "anecdotes": [
+        {
+          "kicker": "The building",
+          "text": "Ysios is as famous for architecture as wine: Santiago Calatrava built the bodega in 2001 as a 200-metre wave of cedar and aluminium that mirrors the Sierra de Cantabria ridge behind it. People drive to Laguardia just to photograph the roof."
+        },
+        {
+          "kicker": "The lawsuit",
+          "text": "That beautiful roof leaked. Badly enough that in 2013 the winery sued Calatrava over a repair bill reported around two million euros — a good line to have ready as the wine breathes: the wave was better to look at than to stand under."
+        },
+        {
+          "kicker": "The name",
+          "text": "Ysios fuses Isis and Osiris, the Egyptian gods of rebirth — the house's founding conceit as a millennium project. Los Prados, 'the meadows', names the home parcels around the winery."
+        }
+      ],
+      "added": "2026-08-05",
+      "sample": false
+    },
+    {
+      "id": "hardys-1853-bin-858-shiraz-2019",
+      "producer": "Hardys",
+      "name": "1853 Special Bin 858 Shiraz",
+      "vintage": 2019,
+      "type": "red",
+      "region": "South Australia",
+      "varietals": ["Shiraz"],
+      "abv": null,
+      "quantity": 1,
+      "status": "cellar",
+      "consumed_date": null,
+      "photo": "photos/hardys-1853-bin-858-shiraz-2019.jpg",
+      "window": {
+        "start": 2021,
+        "end": 2028,
+        "peak_start": 2022,
+        "peak_end": 2026,
+        "confidence": "medium",
+        "note": "Multi-region South Australian shiraz at this tier is best inside seven or eight years; it's in the last stretch of peak now."
+      },
+      "rating": { "score": 87, "basis": "estimated — tier and vintage", "personal": null },
+      "notes": "A broader South Australian blend than its McLaren Vale sibling: black plum, mocha and sweet baking spice, rounder and softer through the middle. Built to please tonight rather than to reward patience.",
+      "pairing_classic": "Barbecue pork ribs with a sticky glaze.",
+      "pairing_offbeat": "Beef tapa, garlic rice, spiced vinegar — breakfast-for-dinner. The vinegar snap resets the wine's fruit-sweetness with every bite.",
+      "anecdotes": [
+        {
+          "kicker": "The word Bin",
+          "text": "'Bin' is Australian cellar bookkeeping: numbered storage bays where batches waited in bottle. Naming wines for their bin number — Penfolds Bin 28, this Bin 858 — started as warehouse admin and calcified into marketing tradition."
+        },
+        {
+          "kicker": "The experiment you own",
+          "text": "You hold two Hardys 2019 shiraz: this multi-region South Australia blend and the single-region McLaren Vale 'Black'. Pour them blind side by side and taste exactly what one region adds — it's a ready-made party game."
+        }
+      ],
+      "added": "2026-08-05",
+      "sample": false
+    },
+    {
+      "id": "pebble-lane-pinot-2022",
+      "producer": "Pebble Lane",
+      "name": "Pinot Noir",
+      "vintage": 2022,
+      "type": "red",
+      "region": "Hawke's Bay, New Zealand",
+      "varietals": ["Pinot Noir"],
+      "abv": null,
+      "quantity": 1,
+      "status": "cellar",
+      "consumed_date": null,
+      "photo": "photos/pebble-lane-pinot-2022.jpg",
+      "window": {
+        "start": 2023,
+        "end": 2027,
+        "peak_start": 2023,
+        "peak_end": 2026,
+        "confidence": "high",
+        "note": "Everyday NZ pinot trades on freshness — earlier is simply better. Drink over the coming year."
+      },
+      "rating": { "score": 85, "basis": "estimated — entry tier", "personal": null },
+      "notes": "Light, bright, red-fruited: cherry cola, cranberry, a leafy edge. Simple in the good sense of the word — serve it cool and it does its job without ceremony.",
+      "pairing_classic": "Mushroom risotto, or roast chicken thighs with pan juices.",
+      "pairing_offbeat": "Slightly chilled, next to inihaw na liempo straight off the grill with a calamansi-soy dip. Light pinot loves char far more than people expect.",
+      "anecdotes": [
+        {
+          "kicker": "The odd one out",
+          "text": "Hawke's Bay is Syrah and Bordeaux-blend country — New Zealand's pinot fame lives south, in Martinborough and Central Otago. A Hawke's Bay pinot is the region playing an away game, which is a more interesting fact than most budget labels carry."
+        },
+        {
+          "kicker": "The region",
+          "text": "This is New Zealand's oldest wine region: French Marist missionaries planted at Mission Estate in 1851, and the winery they founded still operates — it was pouring wine before the country had railways."
+        },
+        {
+          "kicker": "The gravel",
+          "text": "In 1867 a flood shifted the Ngaruroro River overnight and left behind 800 hectares of bony riverbed nobody wanted. That reject land — the Gimblett Gravels — is now the most valuable vineyard dirt in New Zealand."
+        }
+      ],
+      "added": "2026-08-05",
+      "sample": false
+    },
+    {
+      "id": "grant-burge-filsell-2019",
+      "producer": "Grant Burge",
+      "name": "Filsell Shiraz",
+      "vintage": 2019,
+      "type": "red",
+      "region": "Barossa Valley, South Australia",
+      "varietals": ["Shiraz"],
+      "abv": null,
+      "quantity": 1,
+      "status": "cellar",
+      "consumed_date": null,
+      "photo": "photos/grant-burge-filsell-2019.jpg",
+      "window": {
+        "start": 2021,
+        "end": 2031,
+        "peak_start": 2023,
+        "peak_end": 2029,
+        "confidence": "high",
+        "note": "Old-vine Barossa shiraz from a measured, drought-concentrated vintage; a decade is comfortable, now through 2029 is the sweet spot."
+      },
+      "rating": { "score": 91, "basis": "estimated — old-vine cuvée, consistent critical record", "personal": null },
+      "notes": "Old-vine Barossa density without the syrup: blackberry and dark plum, licorice, cedar, tannin with the grain of turned leather. The concentration comes from vine age rather than winemaking force, and you can taste the difference.",
+      "pairing_classic": "Slow-braised beef short ribs.",
+      "pairing_offbeat": "Bulgogi in lettuce cups with ssamjang. Sweet soy beef and plush old-vine shiraz shake hands, and the ssamjang's funk gives the finish somewhere to go.",
+      "anecdotes": [
+        {
+          "kicker": "The vines",
+          "text": "The Filsell vineyard's shiraz was planted around the 1920s — dry-grown, ungrafted vines now past their century. Barossa holds some of the oldest producing shiraz on earth because phylloxera never reached South Australia."
+        },
+        {
+          "kicker": "The engine room",
+          "text": "Filsell fruit is the backbone of Meshach, Grant Burge's flagship. Same vineyard, fraction of the price — this bottle is the flagship's engine room with less oak and less waiting."
+        },
+        {
+          "kicker": "The family",
+          "text": "Grant Burge is fifth-generation Barossa; the first Burge arrived in the valley in the 1850s. The label's 'honouring the 1865 pioneer' points at Meshach Burge, the great-grandfather the flagship is named for."
+        }
+      ],
+      "added": "2026-08-05",
+      "sample": false
+    },
+    {
+      "id": "bastor-lamontagne-sauternes-2015",
+      "producer": "Château Bastor-Lamontagne",
+      "name": "Sauternes",
+      "vintage": 2015,
+      "type": "dessert",
+      "region": "Sauternes, Bordeaux, France",
+      "varietals": ["Sémillon", "Sauvignon Blanc"],
+      "abv": null,
+      "quantity": 1,
+      "status": "cellar",
+      "consumed_date": null,
+      "photo": "photos/bastor-lamontagne-sauternes-2015.jpg",
+      "window": {
+        "start": 2018,
+        "end": 2035,
+        "peak_start": 2021,
+        "peak_end": 2030,
+        "confidence": "medium",
+        "note": "Well-made Sauternes from a fine vintage; already golden and generous, with a decade of upside left. No hurry whatsoever."
+      },
+      "rating": { "score": 91, "basis": "estimated — appellation standing and vintage", "personal": null },
+      "notes": "Apricot, saffron and candied orange peel carried on the honeyed weight of real botrytis. 2015 supplied richness; the acid keeps it from cloying. The colour is deepening toward amber, right on schedule.",
+      "pairing_classic": "Roquefort, foie gras, or a proper tarte tatin.",
+      "pairing_offbeat": "Leche flan with a few flakes of sea salt on top. Same caramel register as the wine — and the salt is the trick, it makes the botrytis taste twice as complex.",
+      "anecdotes": [
+        {
+          "kicker": "The fog machine",
+          "text": "Sauternes exists because of a stream: the cold, spring-fed Ciron meets the warmer Garonne every autumn morning and blankets the vines in mist. The fog feeds noble rot, the afternoon sun concentrates it, and each shrivelled vine yields roughly one glass of wine."
+        },
+        {
+          "kicker": "The harvest",
+          "text": "Pickers walk the same rows again and again — five or six passes, selecting berry by berry, taking only fruit the fungus has properly raisined. It's the closest thing in wine to harvesting with tweezers, which is why honest Sauternes is never cheap to make."
+        },
+        {
+          "kicker": "The estate",
+          "text": "Bastor-Lamontagne's paper trail reaches back to 1711, when the land answered to the French crown. It has never held classed-growth rank, which is exactly why it's the insider's Sauternes — the quality climbed while the price stayed on the ground."
+        }
+      ],
+      "added": "2026-08-05",
+      "sample": false
+    },
+    {
+      "id": "lauer-unterstenberg-12-2022",
+      "producer": "Peter Lauer",
+      "name": "Unterstenberg Riesling № 12",
+      "vintage": 2022,
+      "type": "white",
+      "region": "Ayl, Saar, Germany",
+      "varietals": ["Riesling"],
+      "abv": 12.0,
+      "quantity": 1,
+      "status": "cellar",
+      "consumed_date": null,
+      "photo": "photos/lauer-unterstenberg-12-2022.jpg",
+      "window": {
+        "start": 2024,
+        "end": 2036,
+        "peak_start": 2026,
+        "peak_end": 2032,
+        "confidence": "high",
+        "note": "Grosse Lage Saar riesling with the acid spine for fifteen years; it has just entered its best decade."
+      },
+      "rating": { "score": 92, "basis": "estimated — producer standing and site", "personal": null },
+      "notes": "Saar riesling on a knife's edge: white peach and lime pith over crushed slate, a breath of sweetness that reads as texture rather than sugar, and a long saline tail. Twelve percent alcohol and it feels weightless.",
+      "pairing_classic": "Trout with brown butter and almonds.",
+      "pairing_offbeat": "Sinuglaw — grilled pork belly folded into fish kinilaw. Smoke, vinegar sour, a little chilli: the gently off-dry Saar style might as well have been designed for it.",
+      "anecdotes": [
+        {
+          "kicker": "The number",
+          "text": "Lauer names its wines after casks. Every cuvée carries the number of the barrel — Fass — it historically filled, and № 12 has meant the Unterstenberg parcel for generations. Cellar bookkeeping became the house's entire identity."
+        },
+        {
+          "kicker": "The vineyard",
+          "text": "Unterstenberg is a parcel of the great Ayler Kupp slope, much of it on old ungrafted vines — plantings from before grafting became standard, still on their own roots in the Saar's cold slate."
+        },
+        {
+          "kicker": "The region",
+          "text": "The Saar was German wine's cold edge — a generation ago it fully ripened maybe three years in ten, and those rare successes became legends. Climate change quietly turned the region from gamble to sweet spot, and prices haven't fully noticed yet."
+        }
+      ],
+      "added": "2026-08-05",
+      "sample": false
+    },
+    {
+      "id": "lauer-ayl-21-2022",
+      "producer": "Peter Lauer",
+      "name": "Ayl Riesling № 21",
+      "vintage": 2022,
+      "type": "white",
+      "region": "Ayl, Saar, Germany",
+      "varietals": ["Riesling"],
+      "abv": 12.5,
+      "quantity": 1,
+      "status": "cellar",
+      "consumed_date": null,
+      "photo": "photos/lauer-ayl-21-2022.jpg",
+      "window": {
+        "start": 2023,
+        "end": 2032,
+        "peak_start": 2024,
+        "peak_end": 2029,
+        "confidence": "high",
+        "note": "Dry Erste Lage riesling: excellent on release, gains savoury depth toward the end of the decade."
+      },
+      "rating": { "score": 90, "basis": "estimated — producer standing and tier", "personal": null },
+      "notes": "Bone-dry and quietly stern: green apple, fennel, wet stone, a chalk-dust grip on the finish. The circled T on the fine print means trocken — this is the house's serious dry table wine, built for food more than the terrace.",
+      "pairing_classic": "Oysters, or ceviche with plenty of lime.",
+      "pairing_offbeat": "Chicken inasal with blistered skin and the chili-calamansi dip. Bone-dry riesling is the condiment that table has always been missing.",
+      "anecdotes": [
+        {
+          "kicker": "The tiers in your hands",
+          "text": "Your two Lauers teach the whole German classification: this one is Erste Lage — premier cru, from the Scheidterberg above Ayl — and № 12 is Grosse Lage, grand cru. The VDP borrowed Burgundy's ladder rung for rung; pour both and the hierarchy explains itself."
+        },
+        {
+          "kicker": "The style",
+          "text": "Dry Saar riesling barely existed a generation ago — the region rarely got grapes ripe enough to ferment fully dry without the wine turning sour. A confident trocken from Ayl is a small climate-history document in a glass."
+        }
+      ],
+      "added": "2026-08-05",
+      "sample": false
+    },
+    {
+      "id": "kloster-eberbach-steinberg-gg-2022",
+      "producer": "Kloster Eberbach",
+      "name": "Steinberger Goldener Becher Riesling GG",
+      "vintage": 2022,
+      "type": "white",
+      "region": "Rheingau, Germany",
+      "varietals": ["Riesling"],
+      "abv": null,
+      "quantity": 1,
+      "status": "cellar",
+      "consumed_date": null,
+      "photo": "photos/kloster-eberbach-steinberg-gg-2022.jpg",
+      "window": {
+        "start": 2025,
+        "end": 2040,
+        "peak_start": 2027,
+        "peak_end": 2035,
+        "confidence": "medium",
+        "note": "Young grand cru riesling from a monopole site: approachable now, but the real material arrives from 2027 and holds for a decade beyond."
+      },
+      "rating": { "score": 93, "basis": "estimated — monopole grand cru, strong dry-riesling vintage", "personal": null },
+      "notes": "From the heart of the walled Steinberg: yellow orchard fruit, lemon oil, a smoky wet-stone line, dry and vertical. Monumental mostly in outline right now — the detail fills in from 2027 and it will outlive most of the reds in this cellar.",
+      "pairing_classic": "Wiener schnitzel, or poached turbot with beurre blanc.",
+      "pairing_offbeat": "Hainanese chicken rice with the ginger-scallion sauce. Great dry riesling speaks ginger as a first language.",
+      "anecdotes": [
+        {
+          "kicker": "The wall",
+          "text": "The Steinberg is Germany's Clos Vougeot: monks spent roughly two centuries raising a three-kilometre stone wall around one vineyard, finishing in the 1760s. It has been a monopole — one owner, one wine — for nearly nine hundred years. MONOPOL on the label is the entire flex."
+        },
+        {
+          "kicker": "The parcel",
+          "text": "Goldener Becher — 'the golden cup' — is the prime heart of the enclosure, the parcel the estate bottles as its grand cru. Vineyard names inside a walled monopole are like room names inside a family house: only insiders use them, which is what makes dropping one fun."
+        },
+        {
+          "kicker": "The lineage",
+          "text": "The monks who built this came from Burgundy in 1136, sent by Bernard of Clairvaux's order, and brought their vine-growing doctrine with them. Rheingau riesling and grand cru Burgundy are cousins raised by the same religious order."
+        }
+      ],
+      "added": "2026-08-05",
+      "sample": false
+    },
+    {
+      "id": "lauer-ayl-2-2022",
+      "producer": "Peter Lauer",
+      "name": "Ayler Riesling № 2",
+      "vintage": 2022,
+      "type": "white",
+      "region": "Ayl, Saar, Germany",
+      "varietals": ["Riesling"],
+      "abv": 12.0,
+      "quantity": 0,
+      "status": "consumed",
+      "consumed_date": "2024-04-06",
+      "photo": "photos/lauer-ayl-2-2022.jpg",
+      "window": {
+        "start": 2023,
+        "end": 2029,
+        "peak_start": 2023,
+        "peak_end": 2027,
+        "confidence": "high",
+        "note": "Dry village-tier Saar riesling: brilliant young, holds to decade's end. Drunk at eighteen months — early prime."
+      },
+      "rating": { "score": 88, "basis": "estimated — producer standing and tier", "personal": null },
+      "notes": "The house's dry village wine: green apple, white herbs and slate, Lauer's signature tension at twelve percent, finished with the ⓣ of a proper trocken. Fass 2 is the straightforward one in the range — as straightforward as the Saar ever gets.",
+      "pairing_classic": "Schnitzel with lemon, or a pot of steamed mussels.",
+      "pairing_offbeat": "Sinigang na hipon. Tamarind sourness against dry riesling acidity is a handshake between equals — neither blinks, both win.",
+      "anecdotes": [
+        {
+          "kicker": "The quartet",
+          "text": "This was the collection's fourth Peter Lauer: № 2 and Senior № 6 drunk (village tier, dry and off-dry), № 21 Erste Lage and № 12 Grosse Lage still racked. One grower from one Saar village, four casks deep — the habit is official."
+        },
+        {
+          "kicker": "The accidental experiment",
+          "text": "№ 2 and Senior № 6 are the same village, grape, tier and vintage, split only by style — this one trocken, the Senior gently sweet in the grandfather's taste. Drinking them eighteen months apart was a controlled experiment run by accident."
+        },
+        {
+          "kicker": "The fine print",
+          "text": "The a.p.nr. on the label — 3501074/02/23 — is Germany's official lot number: the /23 says this exact bottling passed the state tasting panel in 2023. German wine carries its own paperwork trail, printed in plain sight."
+        }
+      ],
+      "added": "2026-08-05",
+      "sample": false
+    },
+    {
+      "id": "bentomiz-ariyanas-seco-2021",
+      "producer": "Bodegas Bentomiz",
+      "name": "Ariyanas Seco sobre Lías Finas",
+      "vintage": 2021,
+      "type": "white",
+      "region": "Sierras de Málaga (Axarquía), Spain",
+      "varietals": ["Moscatel de Alejandría"],
+      "abv": null,
+      "quantity": 0,
+      "status": "consumed",
+      "consumed_date": "2025-01-13",
+      "photo": "photos/bentomiz-ariyanas-seco-2021.jpg",
+      "window": {
+        "start": 2022,
+        "end": 2026,
+        "peak_start": 2022,
+        "peak_end": 2025,
+        "confidence": "medium",
+        "note": "Aromatic dry white on lees: best in its first four years. Drunk at three — well timed."
+      },
+      "rating": { "score": 89, "basis": "estimated — producer standing and cuvée", "personal": null },
+      "notes": "Dry Muscat is a high-wire act, and this one walked it: all the orange-blossom, lychee and grape-skin perfume of Moscatel with none of the sugar, the fine lees adding a waxy, saline middle. From slate terraces above Málaga so steep the work is still done by mule.",
+      "pairing_classic": "Espetos — sardines grilled on cane skewers, the Málaga beach ritual.",
+      "pairing_offbeat": "Kinilaw with green mango. The wine's perfume mirrors the fruit while staying bone dry, and the vinegar sharpens both.",
+      "anecdotes": [
+        {
+          "kicker": "The founders",
+          "text": "Bentomiz is a Dutch love story: Clara Verheij and André Both found abandoned slate terraces in the Axarquía hills in the 1990s and rebuilt a wine region bottle by bottle. Their cellar door serves some of the best food in rural Málaga."
+        },
+        {
+          "kicker": "The grape",
+          "text": "Moscatel de Alejandría may be the oldest cultivated wine grape still in commercial production — Phoenician traders moved it through Málaga's port millennia ago. Málaga's fame was built on the sweet version; making it bone-dry is the modern rebellion."
+        },
+        {
+          "kicker": "The history",
+          "text": "Málaga was the first wine region in Spain that phylloxera destroyed — the louse landed there in 1878 and erased a world-famous industry within a decade. Every modern Axarquía bottle is a revival act on century-abandoned terraces."
+        }
+      ],
+      "added": "2026-08-05",
+      "sample": false
+    },
+    {
+      "id": "lauer-senior-6-2022",
+      "producer": "Peter Lauer",
+      "name": "Senior Ayler Riesling № 6",
+      "vintage": 2022,
+      "type": "white",
+      "region": "Ayl, Saar, Germany",
+      "varietals": ["Riesling"],
+      "abv": 11.0,
+      "quantity": 0,
+      "status": "consumed",
+      "consumed_date": "2025-10-31",
+      "photo": "photos/lauer-senior-6-2022.jpg",
+      "window": {
+        "start": 2023,
+        "end": 2030,
+        "peak_start": 2024,
+        "peak_end": 2028,
+        "confidence": "high",
+        "note": "Ortswein-tier Saar riesling: charming young, comfortably good to 2030. Drunk in its prime."
+      },
+      "rating": { "score": 89, "basis": "estimated — producer standing and tier", "personal": null },
+      "notes": "Lauer's crowd-pleaser with the house signature intact: yellow apple and herbs on slatey drive, 11% alcohol, a kiss of sweetness tuned to read nearly dry. Village tier — but the village is Ayl, so it drinks above its rank.",
+      "pairing_classic": "Roast pork with apples, or a Weisswurst brunch.",
+      "pairing_offbeat": "Lumpiang sariwa with the sweet garlic sauce — feinherb riesling and that sauce are secret twins.",
+      "anecdotes": [
+        {
+          "kicker": "The name",
+          "text": "'Senior' honours Peter Lauer the elder — the cuvée preserves the grandfather's preferred gently off-dry house style, kept in the range under his name like a standing toast."
+        },
+        {
+          "kicker": "The ladder, completed",
+          "text": "With this bottle the collection has climbed all three rungs of Lauer's pyramid: Ortswein (this Senior), Erste Lage (№ 21, still racked), Grosse Lage (№ 12, still racked). One grower, one grape, the whole German classification."
+        },
+        {
+          "kicker": "The line",
+          "text": "The single diagonal stroke across every Lauer label is the house trademark — drawn once, printed forever, and findable across a crowded shelf from three metres."
+        }
+      ],
+      "added": "2026-08-05",
+      "sample": false
+    },
+    {
+      "id": "rion-magnatum-2017",
+      "producer": "Domaine Armelle et Bernard Rion",
+      "name": "Magnatum Vieilles Vignes Coteaux Bourguignons",
+      "vintage": 2017,
+      "type": "red",
+      "region": "Vosne-Romanée, Burgundy, France",
+      "varietals": ["Gamay", "Pinot Noir"],
+      "abv": null,
+      "quantity": 0,
+      "status": "consumed",
+      "consumed_date": "2025-12-20",
+      "photo": "photos/rion-magnatum-2017.jpg",
+      "window": {
+        "start": 2019,
+        "end": 2025,
+        "peak_start": 2020,
+        "peak_end": 2024,
+        "confidence": "medium",
+        "note": "Junior-appellation old-vine red: six to eight years. Drunk at the very edge of the window — caught it right where rustic turns tender."
+      },
+      "rating": { "score": 87, "basis": "estimated — grower standing, junior appellation", "personal": null },
+      "notes": "Burgundy's junior appellation in a Vosne-Romanée family's hands: crunchy red cherry and violets with a peppery gamay edge over pinot silk, old vines giving it more middle than the label promises. At eight years it had gone quiet and tender — the right moment.",
+      "pairing_classic": "Coq au vin, or saucisson and a baguette outdoors.",
+      "pairing_offbeat": "Longganisa with garlic rice, wine served cool — the peppery-sweet sausage adores a chilled, juicy burgundy.",
+      "anecdotes": [
+        {
+          "kicker": "The truffle joke",
+          "text": "Magnatum is a wink: Tuber magnatum is the white Alba truffle, and Bernard Rion is Burgundy's most famous truffle hunter — the domaine trains its own truffle dogs and runs hunts out of Vosne-Romanée. The cuvée is named for the family's other obsession."
+        },
+        {
+          "kicker": "The appellation",
+          "text": "Coteaux Bourguignons is Burgundy's catch-all class of 2011 — it replaced the wonderfully honest name 'Bourgogne Grand Ordinaire'. When a Vosne domaine bottles one from vieilles vignes, you're drinking the family's actual Tuesday wine."
+        }
+      ],
+      "added": "2026-08-05",
+      "sample": false
+    },
+    {
+      "id": "lucien-jacob-gevrey-2017",
+      "producer": "Domaine Lucien Jacob",
+      "name": "Gevrey-Chambertin",
+      "vintage": 2017,
+      "type": "red",
+      "region": "Gevrey-Chambertin, Burgundy, France",
+      "varietals": ["Pinot Noir"],
+      "abv": null,
+      "quantity": 0,
+      "status": "consumed",
+      "consumed_date": "2025-12-20",
+      "photo": "photos/lucien-jacob-gevrey-2017.jpg",
+      "window": {
+        "start": 2020,
+        "end": 2029,
+        "peak_start": 2021,
+        "peak_end": 2027,
+        "confidence": "high",
+        "note": "Village Gevrey from an early-charming vintage; drunk at eight years, square in the generous middle."
+      },
+      "rating": { "score": 90, "basis": "estimated — village appellation and vintage", "personal": null },
+      "notes": "Village Gevrey in its open years: dark cherry with a licorice touch, an iron-filing mineral streak and that Gevrey sinew — the burliest of the Côte de Nuits villages, caught right in its generous middle.",
+      "pairing_classic": "Beef bourguignon — the village's own casserole.",
+      "pairing_offbeat": "Adobo flakes — duck if you can get them — over garlic rice. Gevrey's iron note and the crisped soy-vinegar bits are an unlikely handshake that holds.",
+      "anecdotes": [
+        {
+          "kicker": "The name trick",
+          "text": "In 1847 the village of Gevrey annexed the name of its most famous vineyard, Chambertin, and every Côte d'Or village copied the move — Puligny took Montrachet, Vosne took Romanée. Half of Burgundy's place names are 19th-century marketing."
+        },
+        {
+          "kicker": "Napoleon's bottle",
+          "text": "Chambertin was Napoleon's wine — he had it follow him on campaign and drank it cut with water, which Burgundians consider the greatest crime of his career. Legend half-blames the retreat from Moscow on the supply running out."
+        },
+        {
+          "kicker": "The vintage",
+          "text": "2017 was Burgundy's exhale: the first full, frost-spared harvest after devastated 2016, and it made charming, early-drinking reds. Opening it at eight years was textbook."
+        }
+      ],
+      "added": "2026-08-05",
+      "sample": false
+    }
+  ]
+}
