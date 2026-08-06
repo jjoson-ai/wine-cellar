@@ -8,7 +8,10 @@
       "vintage": 2012,
       "type": "sparkling",
       "region": "Champagne (Épernay), France",
-      "varietals": ["Pinot Noir", "Chardonnay"],
+      "varietals": [
+        "Pinot Noir",
+        "Chardonnay"
+      ],
       "abv": null,
       "quantity": 1,
       "status": "cellar",
@@ -27,18 +30,46 @@
         "basis": "estimated — matches the verified critic consensus of 91–94 for the 2012",
         "personal": null,
         "sources": [
-          { "source": "Wine Spectator", "score": "94/100", "detail": "2012, Alison Napjus" },
-          { "source": "Wine Advocate", "score": "94/100", "detail": "2012, William Kelley" },
-          { "source": "Falstaff", "score": "94/100", "detail": "2012, Peter Moser" },
-          { "source": "Wine Enthusiast", "score": "93/100", "detail": "2012, Roger Voss" },
-          { "source": "Vinous", "score": "91/100", "detail": "2012, Antonio Galloni" },
-          { "source": "Jancis Robinson", "score": "17/20", "detail": "2012 vintage" },
-          { "source": "CellarTracker", "score": "91.6/100", "detail": "2012, community avg of 65 notes" }
+          {
+            "source": "Wine Spectator",
+            "score": "94/100",
+            "detail": "2012, Alison Napjus"
+          },
+          {
+            "source": "Wine Advocate",
+            "score": "94/100",
+            "detail": "2012, William Kelley"
+          },
+          {
+            "source": "Falstaff",
+            "score": "94/100",
+            "detail": "2012, Peter Moser"
+          },
+          {
+            "source": "Wine Enthusiast",
+            "score": "93/100",
+            "detail": "2012, Roger Voss"
+          },
+          {
+            "source": "Vinous",
+            "score": "91/100",
+            "detail": "2012, Antonio Galloni"
+          },
+          {
+            "source": "Jancis Robinson",
+            "score": "17/20",
+            "detail": "2012 vintage"
+          },
+          {
+            "source": "CellarTracker",
+            "score": "91.6/100",
+            "detail": "2012, community avg of 65 notes"
+          }
         ]
       },
       "notes": "Mature vintage rosé in full voice: the salmon pink is edging toward onion skin, wild strawberry and blood orange have picked up brioche, hazelnut and a savoury pinot depth, and the mousse has softened to cream. Assembled the old way — half Pinot Noir, a third Chardonnay, and a dose of still Bouzy red for colour. More a wine with bubbles than a party sparkler — serve it not too cold.",
-      "pairing_classic": "Whole roast chicken with tarragon, or lamb cutlets cooked pink.",
-      "pairing_offbeat": "Lechon, skin priority. The mousse scrubs the fat, the pinot core stands up to the roast, and a fourteen-year-old rosé has enough savoury depth to talk to the liver sauce.",
+      "pairing_classic": "Potée champenoise — the harvest-day pot of ham, sausage and cabbage the pickers eat — or simply a roast chicken with tarragon.",
+      "pairing_offbeat": "Lechon, skin priority — cochinillo if you're in Spain. The mousse scrubs the fat, the pinot core stands up to the roast, and a fourteen-year-old rosé has enough savoury depth to talk to the liver sauce.",
       "anecdotes": [
         {
           "kicker": "Churchill's house",
@@ -67,7 +98,10 @@
       "vintage": 2018,
       "type": "red",
       "region": "Bordeaux, France",
-      "varietals": ["Merlot", "Cabernet Sauvignon"],
+      "varietals": [
+        "Merlot",
+        "Cabernet Sauvignon"
+      ],
       "abv": null,
       "quantity": 1,
       "status": "cellar",
@@ -86,12 +120,20 @@
         "basis": "estimated — consistent with community data",
         "personal": null,
         "sources": [
-          { "source": "Vivino", "score": "3.7/5", "detail": "~6,900 ratings, all vintages" },
-          { "source": "CellarTracker", "score": "89.3/100", "detail": "2018 vintage, community average of 8 notes" }
+          {
+            "source": "Vivino",
+            "score": "3.7/5",
+            "detail": "~6,900 ratings, all vintages"
+          },
+          {
+            "source": "CellarTracker",
+            "score": "89.3/100",
+            "detail": "2018 vintage, community average of 8 notes"
+          }
         ]
       },
       "notes": "Merlot-led claret in its easy chair: plum, cedar shavings, a little tobacco leaf, tannins already melted. It hit its stride around 2023 and is coasting now — open it, don't cellar it, and keep the decant short.",
-      "pairing_classic": "Steak frites, bavette cooked rare.",
+      "pairing_classic": "Entrecôte à la bordelaise — ribeye under the red-wine shallot sauce, the city's own bistro standard.",
       "pairing_offbeat": "Tortang talong with giniling. Smoky grilled eggplant does for mellow Merlot what char always does — it adds back the savoury edge the wine has traded for softness.",
       "anecdotes": [
         {
@@ -113,7 +155,9 @@
       "vintage": 2023,
       "type": "red",
       "region": "Valle de Colchagua, Chile",
-      "varietals": ["Carménère"],
+      "varietals": [
+        "Carménère"
+      ],
       "abv": null,
       "quantity": 1,
       "status": "cellar",
@@ -134,7 +178,7 @@
         "sources": []
       },
       "notes": "Deep purple and unmistakably Carménère: blackberry and plum over roasted red pepper, sweet paprika and a dusting of cocoa. Soft-grained tannin, made to be friendly young — not a wine to overthink, a wine to pour.",
-      "pairing_classic": "Chilean asado — grilled flank steak with pebre — or beef empanadas.",
+      "pairing_classic": "Chilean asado with pebre, or empanadas de pino — beef, olive, raisin and boiled egg, the national handful.",
       "pairing_offbeat": "Crispy duck in hoisin wraps. The grape's roasted-pepper note behaves like an extra spoonful of hoisin, and the wine's plushness rides the pancake's sweetness.",
       "anecdotes": [
         {
@@ -160,7 +204,9 @@
       "vintage": 2021,
       "type": "red",
       "region": "Cachapoal Andes, Chile",
-      "varietals": ["Cabernet Sauvignon"],
+      "varietals": [
+        "Cabernet Sauvignon"
+      ],
       "abv": null,
       "quantity": 1,
       "status": "cellar",
@@ -179,11 +225,15 @@
         "basis": "estimated — tempered by a weak Vivino community showing",
         "personal": null,
         "sources": [
-          { "source": "Vivino", "score": "3.3/5", "detail": "2021 vintage attribution; ratings count not visible" }
+          {
+            "source": "Vivino",
+            "score": "3.3/5",
+            "detail": "2021 vintage attribution; ratings count not visible"
+          }
         ]
       },
       "notes": "Cassis and dried herbs with a graphite line down the middle; medium-bodied, brisk acidity off cool Andean nights, a clean and faintly dusty finish. Honest Tuesday cabernet that punches at its price.",
-      "pairing_classic": "Ribeye with chimichurri.",
+      "pairing_classic": "Plateada al horno — Chile's slow-roasted brisket cap, collapsing into its own juices.",
       "pairing_offbeat": "Filipino barbecue skewers with the banana-ketchup glaze charred at the edges — the sweet-sour lacquer locks onto the cassis and the grill smoke ties the knot.",
       "anecdotes": [
         {
@@ -213,7 +263,9 @@
       "vintage": 2018,
       "type": "red",
       "region": "Rüdesheim, Rheingau, Germany",
-      "varietals": ["Spätburgunder (Pinot Noir)"],
+      "varietals": [
+        "Spätburgunder (Pinot Noir)"
+      ],
       "abv": null,
       "quantity": 1,
       "status": "cellar",
@@ -232,11 +284,15 @@
         "basis": "estimated — the one vintage-specific guide score runs a notch cooler",
         "personal": null,
         "sources": [
-          { "source": "wein.plus Weinguide", "score": "89/100", "detail": "2018 vintage — the only vintage-specific score found; beware conflation with the higher-scored Berg Schlossberg GG" }
+          {
+            "source": "wein.plus Weinguide",
+            "score": "89/100",
+            "detail": "2018 vintage — the only vintage-specific score found; beware conflation with the higher-scored Berg Schlossberg GG"
+          }
         ]
       },
       "notes": "German Pinot at full stretch: black cherry and rosehip, forest floor, a smoky mineral thread off the slate-and-quartzite slope above Rüdesheim. Silkier than village Burgundy at the same age, with 2018's warmth filling out the mid-palate.",
-      "pairing_classic": "Duck breast with cherry jus, or roast goose.",
+      "pairing_classic": "The St. Martin's Day goose with Rotkohl — or Rheinischer Sauerbraten, the Rhine's sweet-sour pot roast.",
       "pairing_offbeat": "Unagi kabayaki over rice. The eel's sweet soy glaze and charcoal edge are exactly what silky Spätburgunder wants — a sommelier party trick that never misses.",
       "anecdotes": [
         {
@@ -266,7 +322,9 @@
       "vintage": 2019,
       "type": "red",
       "region": "McLaren Vale, South Australia",
-      "varietals": ["Shiraz"],
+      "varietals": [
+        "Shiraz"
+      ],
       "abv": null,
       "quantity": 1,
       "status": "cellar",
@@ -285,11 +343,15 @@
         "basis": "estimated — in line with community data",
         "personal": null,
         "sources": [
-          { "source": "Vivino", "score": "3.8/5", "detail": "cuvée page, all vintages" }
+          {
+            "source": "Vivino",
+            "score": "3.8/5",
+            "detail": "cuvée page, all vintages"
+          }
         ]
       },
       "notes": "McLaren Vale in one glass: blackberry jam cut with dark chocolate, licorice and a eucalyptus lift. 'Black' is truth in labelling — inky, plush, generously oaked, zero minimalism.",
-      "pairing_classic": "Pepper-crusted lamb rump, or beef ribs off the smoker.",
+      "pairing_classic": "Barbecued lamb chops with charred rosemary — or kangaroo fillet, if you're being properly South Australian.",
       "pairing_offbeat": "Char siu, burnt ends included. Maltose lacquer and five-spice meet shiraz jam and sweet oak — the same flavour built from two directions.",
       "anecdotes": [
         {
@@ -315,7 +377,9 @@
       "vintage": 2015,
       "type": "red",
       "region": "Rioja Alavesa, Spain",
-      "varietals": ["Tempranillo"],
+      "varietals": [
+        "Tempranillo"
+      ],
       "abv": null,
       "quantity": 1,
       "status": "cellar",
@@ -334,12 +398,20 @@
         "basis": "estimated — direct 2015 scores are scarce; the sibling 2016 medalled",
         "personal": null,
         "sources": [
-          { "source": "Sommeliers Choice Awards 2020", "score": "Gold, 92 pts", "detail": "2016 vintage, not this 2015" },
-          { "source": "Mivino (ES)", "score": "featured, no points", "detail": "2015-specific tasting profile" }
+          {
+            "source": "Sommeliers Choice Awards 2020",
+            "score": "Gold, 92 pts",
+            "detail": "2016 vintage, not this 2015"
+          },
+          {
+            "source": "Mivino (ES)",
+            "score": "featured, no points",
+            "detail": "2015-specific tasting profile"
+          }
         ]
       },
       "notes": "Modern Rioja Alavesa: black cherry with balsamic depth, vanilla and a coconut whisper from oak that has now folded in, chalk-fine tannin off limestone under the Sierra de Cantabria. Eleven years on it's fully assembled.",
-      "pairing_classic": "Roast lamb, or jamón ibérico with aged Manchego.",
+      "pairing_classic": "Chuletillas al sarmiento — milk-fed lamb chops grilled over vine cuttings — or patatas a la riojana when it's cold.",
       "pairing_offbeat": "Beef kaldereta. The liver-spread richness in the sauce is practically Rioja's soulmate — tempranillo's acid cuts it, the oak's vanilla rounds the chilli.",
       "anecdotes": [
         {
@@ -365,7 +437,9 @@
       "vintage": 2019,
       "type": "red",
       "region": "South Australia",
-      "varietals": ["Shiraz"],
+      "varietals": [
+        "Shiraz"
+      ],
       "abv": null,
       "quantity": 1,
       "status": "cellar",
@@ -384,11 +458,15 @@
         "basis": "estimated — anchored to Wine Enthusiast's 90 for this exact vintage",
         "personal": null,
         "sources": [
-          { "source": "Wine Enthusiast", "score": "90/100", "detail": "2019 vintage — this exact bottling" }
+          {
+            "source": "Wine Enthusiast",
+            "score": "90/100",
+            "detail": "2019 vintage — this exact bottling"
+          }
         ]
       },
       "notes": "A broader South Australian blend than its McLaren Vale sibling — 51% Barossa, 48% Clare Valley, a splash of McLaren Vale: black plum, mocha and sweet baking spice, rounder and softer through the middle. Built to please tonight rather than to reward patience.",
-      "pairing_classic": "Barbecue pork ribs with a sticky glaze.",
+      "pairing_classic": "A proper Aussie barbecue: beef short ribs, burnt snags, no apologies.",
       "pairing_offbeat": "Beef tapa, garlic rice, spiced vinegar — breakfast-for-dinner. The vinegar snap resets the wine's fruit-sweetness with every bite.",
       "anecdotes": [
         {
@@ -414,7 +492,9 @@
       "vintage": 2022,
       "type": "red",
       "region": "Hawke's Bay, New Zealand",
-      "varietals": ["Pinot Noir"],
+      "varietals": [
+        "Pinot Noir"
+      ],
       "abv": null,
       "quantity": 1,
       "status": "cellar",
@@ -433,11 +513,15 @@
         "basis": "estimated — in line with community data",
         "personal": null,
         "sources": [
-          { "source": "Vivino", "score": "3.7/5", "detail": "~290 ratings, Hawke's Bay cuvée page, all vintages" }
+          {
+            "source": "Vivino",
+            "score": "3.7/5",
+            "detail": "~290 ratings, Hawke's Bay cuvée page, all vintages"
+          }
         ]
       },
       "notes": "Light, bright, red-fruited: cherry cola, cranberry, a leafy edge. Simple in the good sense of the word — serve it cool and it does its job without ceremony.",
-      "pairing_classic": "Mushroom risotto, or roast chicken thighs with pan juices.",
+      "pairing_classic": "Lamb rump with kūmara mash — Hawke's Bay is lamb country before it is wine country.",
       "pairing_offbeat": "Slightly chilled, next to inihaw na liempo straight off the grill with a calamansi-soy dip. Light pinot loves char far more than people expect.",
       "anecdotes": [
         {
@@ -463,7 +547,9 @@
       "vintage": 2019,
       "type": "red",
       "region": "Barossa Valley, South Australia",
-      "varietals": ["Shiraz"],
+      "varietals": [
+        "Shiraz"
+      ],
       "abv": null,
       "quantity": 1,
       "status": "cellar",
@@ -482,16 +568,40 @@
         "basis": "estimated — centred in a verified 88–95 critic spread for this vintage",
         "personal": null,
         "sources": [
-          { "source": "Huon Hooke (The Real Review)", "score": "95/100", "detail": "2019 vintage" },
-          { "source": "Andrew Caillard MW", "score": "94/100", "detail": "2019, Vintage Journal Barossa Guide" },
-          { "source": "Halliday Wine Companion", "score": "92/100", "detail": "2019, reviewed by Dave Brookes" },
-          { "source": "James Suckling", "score": "91/100", "detail": "2019 vintage" },
-          { "source": "Wine Enthusiast", "score": "88/100", "detail": "2019 vintage" },
-          { "source": "Vivino", "score": "4.0/5", "detail": "cuvée page, all vintages" }
+          {
+            "source": "Huon Hooke (The Real Review)",
+            "score": "95/100",
+            "detail": "2019 vintage"
+          },
+          {
+            "source": "Andrew Caillard MW",
+            "score": "94/100",
+            "detail": "2019, Vintage Journal Barossa Guide"
+          },
+          {
+            "source": "Halliday Wine Companion",
+            "score": "92/100",
+            "detail": "2019, reviewed by Dave Brookes"
+          },
+          {
+            "source": "James Suckling",
+            "score": "91/100",
+            "detail": "2019 vintage"
+          },
+          {
+            "source": "Wine Enthusiast",
+            "score": "88/100",
+            "detail": "2019 vintage"
+          },
+          {
+            "source": "Vivino",
+            "score": "4.0/5",
+            "detail": "cuvée page, all vintages"
+          }
         ]
       },
       "notes": "Old-vine Barossa density without the syrup: blackberry and dark plum, licorice, cedar, tannin with the grain of turned leather. The concentration comes from vine age rather than winemaking force, and you can taste the difference.",
-      "pairing_classic": "Slow-braised beef short ribs.",
+      "pairing_classic": "Shiraz-braised beef cheeks with a side of mettwurst — the Barossa's Silesian settlers still smoke their own.",
       "pairing_offbeat": "Bulgogi in lettuce cups with ssamjang. Sweet soy beef and plush old-vine shiraz shake hands, and the ssamjang's funk gives the finish somewhere to go.",
       "anecdotes": [
         {
@@ -517,7 +627,10 @@
       "vintage": 2015,
       "type": "dessert",
       "region": "Sauternes, Bordeaux, France",
-      "varietals": ["Sémillon", "Sauvignon Blanc"],
+      "varietals": [
+        "Sémillon",
+        "Sauvignon Blanc"
+      ],
       "abv": null,
       "quantity": 1,
       "status": "cellar",
@@ -536,16 +649,40 @@
         "basis": "estimated — centred in the verified 90–93 critic band for the 2015",
         "personal": null,
         "sources": [
-          { "source": "James Suckling", "score": "93/100", "detail": "2015, via retail listing" },
-          { "source": "Decanter", "score": "93/100", "detail": "2015, via retail listing" },
-          { "source": "Wine Advocate", "score": "93/100", "detail": "2015; 91–93 en primeur" },
-          { "source": "Wine Enthusiast", "score": "90/100", "detail": "2015, Roger Voss" },
-          { "source": "The Wine Cellar Insider", "score": "90/100", "detail": "2015 — 'the best vintage ever for Bastor'" },
-          { "source": "Vivino", "score": "4.0/5", "detail": "cuvée page, all vintages" }
+          {
+            "source": "James Suckling",
+            "score": "93/100",
+            "detail": "2015, via retail listing"
+          },
+          {
+            "source": "Decanter",
+            "score": "93/100",
+            "detail": "2015, via retail listing"
+          },
+          {
+            "source": "Wine Advocate",
+            "score": "93/100",
+            "detail": "2015; 91–93 en primeur"
+          },
+          {
+            "source": "Wine Enthusiast",
+            "score": "90/100",
+            "detail": "2015, Roger Voss"
+          },
+          {
+            "source": "The Wine Cellar Insider",
+            "score": "90/100",
+            "detail": "2015 — 'the best vintage ever for Bastor'"
+          },
+          {
+            "source": "Vivino",
+            "score": "4.0/5",
+            "detail": "cuvée page, all vintages"
+          }
         ]
       },
       "notes": "Apricot, saffron and candied orange peel carried on the honeyed weight of real botrytis. 2015 supplied richness; the acid keeps it from cloying. The colour is deepening toward amber, right on schedule.",
-      "pairing_classic": "Roquefort, foie gras, or a proper tarte tatin.",
+      "pairing_classic": "Foie gras mi-cuit — the Sud-Ouest's own handshake — or Roquefort to close the meal.",
       "pairing_offbeat": "Leche flan with a few flakes of sea salt on top. Same caramel register as the wine — and the salt is the trick, it makes the botrytis taste twice as complex.",
       "anecdotes": [
         {
@@ -571,7 +708,9 @@
       "vintage": 2022,
       "type": "white",
       "region": "Ayl, Saar, Germany",
-      "varietals": ["Riesling"],
+      "varietals": [
+        "Riesling"
+      ],
       "abv": 12.0,
       "quantity": 1,
       "status": "cellar",
@@ -590,14 +729,30 @@
         "basis": "estimated — bracketed by Mosel Fine Wines' 91 and a merchant 92+",
         "personal": null,
         "sources": [
-          { "source": "Mosel Fine Wines", "score": "91/100", "detail": "2022 vintage, Issue 66" },
-          { "source": "Vinothek der Saar", "score": "92+/100", "detail": "2022 — merchant score, not a major critic" },
-          { "source": "James Suckling (Pigott)", "score": "95/100", "detail": "2023 vintage, not this 2022" },
-          { "source": "Vivino", "score": "4.2/5", "detail": "~70 ratings, cuvée page, all vintages" }
+          {
+            "source": "Mosel Fine Wines",
+            "score": "91/100",
+            "detail": "2022 vintage, Issue 66"
+          },
+          {
+            "source": "Vinothek der Saar",
+            "score": "92+/100",
+            "detail": "2022 — merchant score, not a major critic"
+          },
+          {
+            "source": "James Suckling (Pigott)",
+            "score": "95/100",
+            "detail": "2023 vintage, not this 2022"
+          },
+          {
+            "source": "Vivino",
+            "score": "4.2/5",
+            "detail": "~70 ratings, cuvée page, all vintages"
+          }
         ]
       },
       "notes": "Saar riesling on a knife's edge: white peach and lime pith over crushed slate, a breath of sweetness that reads as texture rather than sugar, and a long saline tail. Twelve percent alcohol and it feels weightless.",
-      "pairing_classic": "Trout with brown butter and almonds.",
+      "pairing_classic": "Forelle Müllerin — pan-fried river trout with brown butter and almonds, the Saar's own fish.",
       "pairing_offbeat": "Sinuglaw — grilled pork belly folded into fish kinilaw. Smoke, vinegar sour, a little chilli: the gently off-dry Saar style might as well have been designed for it.",
       "anecdotes": [
         {
@@ -623,7 +778,9 @@
       "vintage": 2022,
       "type": "white",
       "region": "Ayl, Saar, Germany",
-      "varietals": ["Riesling"],
+      "varietals": [
+        "Riesling"
+      ],
       "abv": 12.5,
       "quantity": 1,
       "status": "cellar",
@@ -642,11 +799,15 @@
         "basis": "estimated — coverage is thin because this is the debut bottling",
         "personal": null,
         "sources": [
-          { "source": "Vinothek der Saar", "score": "93+/100", "detail": "2022 — merchant score, not a major critic; the only number found" }
+          {
+            "source": "Vinothek der Saar",
+            "score": "93+/100",
+            "detail": "2022 — merchant score, not a major critic; the only number found"
+          }
         ]
       },
       "notes": "Bone-dry and quietly stern: green apple, fennel, wet stone, a chalk-dust grip on the finish. The circled T on the fine print means trocken — this is the house's serious dry table wine, built for food more than the terrace. 2022 was this bottling's debut: Lauer's first-ever dry Erste Lage, which is why the critics hadn't caught up to it yet.",
-      "pairing_classic": "Oysters, or ceviche with plenty of lime.",
+      "pairing_classic": "A Winzervesper — smoked ham, young cheese, dark bread: the growers' lunch this style was built for.",
       "pairing_offbeat": "Chicken inasal with blistered skin and the chili-calamansi dip. Bone-dry riesling is the condiment that table has always been missing.",
       "anecdotes": [
         {
@@ -668,7 +829,9 @@
       "vintage": 2022,
       "type": "white",
       "region": "Rheingau, Germany",
-      "varietals": ["Riesling"],
+      "varietals": [
+        "Riesling"
+      ],
       "abv": null,
       "quantity": 1,
       "status": "cellar",
@@ -687,13 +850,25 @@
         "basis": "estimated — the 2022 itself is unrated; neighbouring vintages run 92–97",
         "personal": null,
         "sources": [
-          { "source": "James Suckling (Stuart Pigott)", "score": "97/100", "detail": "2021 debut vintage, NOT this 2022 — the producer reuses the quote" },
-          { "source": "Falstaff", "score": "94–95.5/100", "detail": "2021, 2023 and 2024 vintages; no 2022 rating published" },
-          { "source": "The Fine Wine Review", "score": "92(+)–94+", "detail": "2021 and 2023 vintages; 2022 not reviewed" }
+          {
+            "source": "James Suckling (Stuart Pigott)",
+            "score": "97/100",
+            "detail": "2021 debut vintage, NOT this 2022 — the producer reuses the quote"
+          },
+          {
+            "source": "Falstaff",
+            "score": "94–95.5/100",
+            "detail": "2021, 2023 and 2024 vintages; no 2022 rating published"
+          },
+          {
+            "source": "The Fine Wine Review",
+            "score": "92(+)–94+",
+            "detail": "2021 and 2023 vintages; 2022 not reviewed"
+          }
         ]
       },
       "notes": "From the heart of the walled Steinberg: yellow orchard fruit, lemon oil, a smoky wet-stone line, dry and vertical. Monumental mostly in outline right now — the detail fills in from 2027 and it will outlive most of the reds in this cellar.",
-      "pairing_classic": "Wiener schnitzel, or poached turbot with beurre blanc.",
+      "pairing_classic": "Zander in riesling cream sauce — Rhine fish poached in Rhine wine, the Rheingau's own logic.",
       "pairing_offbeat": "Hainanese chicken rice with the ginger-scallion sauce. Great dry riesling speaks ginger as a first language.",
       "anecdotes": [
         {
@@ -723,7 +898,9 @@
       "vintage": 2022,
       "type": "white",
       "region": "Ayl, Saar, Germany",
-      "varietals": ["Riesling"],
+      "varietals": [
+        "Riesling"
+      ],
       "abv": 12.0,
       "quantity": 0,
       "status": "consumed",
@@ -742,11 +919,15 @@
         "basis": "estimated — no confirmed score exists for the 2022",
         "personal": null,
         "sources": [
-          { "source": "Stuart Pigott", "score": "91/100", "detail": "listed on the producer's page without a vintage — likely a later release, not confirmed for 2022" }
+          {
+            "source": "Stuart Pigott",
+            "score": "91/100",
+            "detail": "listed on the producer's page without a vintage — likely a later release, not confirmed for 2022"
+          }
         ]
       },
       "notes": "The house's dry village wine: green apple, white herbs and slate, Lauer's signature tension at twelve percent, finished with the ⓣ of a proper trocken. Fass 2 is the straightforward one in the range — as straightforward as the Saar ever gets.",
-      "pairing_classic": "Schnitzel with lemon, or a pot of steamed mussels.",
+      "pairing_classic": "Dibbelabbes — the Saarland's potato, leek and dried-beef hash, scraped crisp from the pan.",
       "pairing_offbeat": "Sinigang na hipon. Tamarind sourness against dry riesling acidity is a handshake between equals — neither blinks, both win.",
       "anecdotes": [
         {
@@ -772,7 +953,9 @@
       "vintage": 2021,
       "type": "white",
       "region": "Sierras de Málaga (Axarquía), Spain",
-      "varietals": ["Moscatel de Alejandría"],
+      "varietals": [
+        "Moscatel de Alejandría"
+      ],
       "abv": null,
       "quantity": 0,
       "status": "consumed",
@@ -791,9 +974,21 @@
         "basis": "estimated — inside the cuvée's cross-vintage record of 88–92",
         "personal": null,
         "sources": [
-          { "source": "Falstaff", "score": "91/100", "detail": "2019 vintage, not this 2021" },
-          { "source": "Guía Peñín", "score": "88–92/100", "detail": "across vintages; none seen for 2021" },
-          { "source": "Jancis Robinson", "score": "17.5/20", "detail": "2018 vintage" }
+          {
+            "source": "Falstaff",
+            "score": "91/100",
+            "detail": "2019 vintage, not this 2021"
+          },
+          {
+            "source": "Guía Peñín",
+            "score": "88–92/100",
+            "detail": "across vintages; none seen for 2021"
+          },
+          {
+            "source": "Jancis Robinson",
+            "score": "17.5/20",
+            "detail": "2018 vintage"
+          }
         ]
       },
       "notes": "Dry Muscat is a high-wire act, and this one walked it: all the orange-blossom, lychee and grape-skin perfume of Moscatel with none of the sugar, the fine lees adding a waxy, saline middle. From slate terraces above Málaga so steep the work is still done by mule.",
@@ -827,7 +1022,9 @@
       "vintage": 2022,
       "type": "white",
       "region": "Ayl, Saar, Germany",
-      "varietals": ["Riesling"],
+      "varietals": [
+        "Riesling"
+      ],
       "abv": 11.0,
       "quantity": 0,
       "status": "consumed",
@@ -846,13 +1043,25 @@
         "basis": "estimated — lands exactly on Mosel Fine Wines' 89",
         "personal": null,
         "sources": [
-          { "source": "Mosel Fine Wines", "score": "89/100", "detail": "2022 vintage; 11 g/l RS, window 2024–2034" },
-          { "source": "CellarTracker", "score": "90.8/100", "detail": "2022, community avg of 9 notes" },
-          { "source": "Vivino", "score": "4.1/5", "detail": "~720 ratings, cuvée page, all vintages" }
+          {
+            "source": "Mosel Fine Wines",
+            "score": "89/100",
+            "detail": "2022 vintage; 11 g/l RS, window 2024–2034"
+          },
+          {
+            "source": "CellarTracker",
+            "score": "90.8/100",
+            "detail": "2022, community avg of 9 notes"
+          },
+          {
+            "source": "Vivino",
+            "score": "4.1/5",
+            "detail": "~720 ratings, cuvée page, all vintages"
+          }
         ]
       },
       "notes": "Lauer's crowd-pleaser with the house signature intact: yellow apple and herbs on slatey drive, 11% alcohol, a kiss of sweetness tuned to read nearly dry. Village tier — but the village is Ayl, so it drinks above its rank.",
-      "pairing_classic": "Roast pork with apples, or a Weisswurst brunch.",
+      "pairing_classic": "Schweinebraten with bread dumplings — the German Sunday roast this gently-sweet style was tuned for.",
       "pairing_offbeat": "Lumpiang sariwa with the sweet garlic sauce — feinherb riesling and that sauce are secret twins.",
       "anecdotes": [
         {
@@ -878,7 +1087,9 @@
       "vintage": 2017,
       "type": "white",
       "region": "Vosne-Romanée, Burgundy, France",
-      "varietals": ["Chardonnay"],
+      "varietals": [
+        "Chardonnay"
+      ],
       "abv": null,
       "quantity": 0,
       "status": "consumed",
@@ -897,12 +1108,20 @@
         "basis": "estimated, calibrated to Vivino community data",
         "personal": null,
         "sources": [
-          { "source": "Vivino", "score": "4.0/5", "detail": "124 ratings, cuvée page across vintages" },
-          { "source": "Wine-Searcher", "score": "no critic scores listed", "detail": "checked Aug 2026" }
+          {
+            "source": "Vivino",
+            "score": "4.0/5",
+            "detail": "124 ratings, cuvée page across vintages"
+          },
+          {
+            "source": "Wine-Searcher",
+            "score": "no critic scores listed",
+            "detail": "checked Aug 2026"
+          }
         ]
       },
       "notes": "Old-vine Chardonnay from a Vosne-Romanée family, bottled under Burgundy's junior label — Vivino's crowd files it under 'buttery and complex', which fits the style: baked apple, hazelnut and beeswax over a creamy middle. At eight years it was fully mature white Burgundy — honeyed, nutty, past fruit and into character.",
-      "pairing_classic": "Anything with truffle — the name is the serving suggestion. Failing that, roast chicken with cream and tarragon.",
+      "pairing_classic": "Gougères warm from the oven — Burgundy's cheese-puff aperitif — or anything with truffle; the name is the serving suggestion.",
       "pairing_offbeat": "Kare-kare. Mature Chardonnay's toasted-nut width meets the peanut sauce weight for weight, and the bagoong brings the salt the wine is quietly asking for.",
       "anecdotes": [
         {
@@ -928,7 +1147,9 @@
       "vintage": 2017,
       "type": "red",
       "region": "Gevrey-Chambertin, Burgundy, France",
-      "varietals": ["Pinot Noir"],
+      "varietals": [
+        "Pinot Noir"
+      ],
       "abv": null,
       "quantity": 0,
       "status": "consumed",
@@ -947,7 +1168,11 @@
         "basis": "estimated — consistent with community data; no critic coverage found",
         "personal": null,
         "sources": [
-          { "source": "Vivino", "score": "4.0/5", "detail": "~3,350 ratings, cuvée page, all vintages" }
+          {
+            "source": "Vivino",
+            "score": "4.0/5",
+            "detail": "~3,350 ratings, cuvée page, all vintages"
+          }
         ]
       },
       "notes": "Village Gevrey in its open years: dark cherry with a licorice touch, an iron-filing mineral streak and that Gevrey sinew — the burliest of the Côte de Nuits villages, caught right in its generous middle.",

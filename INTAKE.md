@@ -62,9 +62,15 @@ the *facts* change: a new bottle, a corrected window, a bottle opened.
 
    - **Drinking window** — reason from producer, appellation, vintage quality and
      structure. Put the reasoning in `window.note`; it shows on the detail page.
+   - **Classic pairing** — weight toward the wine's *place of origin*: what grows
+     together goes together. Reach for the region's own table (potée champenoise for
+     Champagne, chuletillas al sarmiento for Rioja, zander in riesling sauce for the
+     Rheingau), not the generic international match. Owner directive, 2026-08-06.
    - **Offbeat pairing** — genuinely non-traditional, and explain *why* it works
-     (acid, fat, char, sweetness). Filipino and Southeast Asian dishes land well here
-     and the owner likes them; do not force it on every bottle.
+     (acid, fat, char, sweetness). Constraint: it must be cookable or easily found in
+     **Manila or Spain** (the owner's two food contexts). Filipino and Southeast Asian
+     dishes land well and are welcome, but are NOT required — owner relaxed this
+     2026-08-06.
    - **Anecdotes** — 2–4 items, each `{kicker, text}`. The kicker names what the story
      is *about* (`The producer`, `The grape`, `The vintage`, `The place`, `The name`).
      These get said out loud at a table, so: specific, checkable, and short. No
