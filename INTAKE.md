@@ -34,6 +34,20 @@ the *facts* change: a new bottle, a corrected window, a bottle opened.
    detail cannot be read and cannot be inferred, leave the field `null` rather than
    guessing.
 
+1b. **Verify the identification on the web — every bottle, no exceptions.** Search
+   `<producer> <cuvée> <vintage>` and confirm colour, grape and style from at least one
+   independent source (producer site, Vivino, Wine-Searcher, a merchant listing) before
+   writing the entry. Labels often omit colour and grape, and an appellation's *typical*
+   pattern is a prior, not evidence — the Rion "Magnatum" was entered as a red
+   Gamay/Pinot from exactly that prior and is in fact old-vine Chardonnay blanc
+   (owner-corrected 2026-08-06). While there, gather rating corroboration into
+   `rating.sources`: Vivino average + rating count, professional critic scores,
+   competition medals — each as `{source, score, detail}`, with the detail noting when a
+   score is cross-vintage or approximate. Only record scores actually seen — never
+   invent one. If nothing verifiable exists, record `"sources": []` (the page then says
+   the estimate stands alone) and note the checked date. Calibrate `rating.score` to
+   whatever evidence was found and say so in `rating.basis`.
+
 2. **Save the photo.** Resize first, or the built page bloats:
 
    ```bash
